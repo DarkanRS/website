@@ -191,14 +191,14 @@ html {
                 text-decoration: none;
                 color: rgb(222, 222, 222);
             }
-            // button - hover state
-            .button-hover {
+            // button & row - hover state
+            .button-hover, .row-hover {
                 &:hover {
                     opacity: 85%;
                     transition: opacity 200ms ease-in-out;
                 }
                 cursor: pointer;
-            } 
+            }
             // drop shadow
             .shadow-dropdown {
                 box-shadow: 0px 0px 5px rgb(0, 0, 0);

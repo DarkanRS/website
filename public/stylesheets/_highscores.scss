@@ -8,55 +8,70 @@
             margin: 0rem;
         }
         h2 {
-            text-align: left;
+            margin-top: 0rem;
         }
-        nav {
-            padding: 1rem;
-            a {
-                padding: 1rem 3rem;
-                background-color: blue;
-                border-radius: 2px;
-
-                @include breakpoint-up(medium) {
-                    padding: 1rem 4rem;
-                }
-            }
-            a:not(:last-child) {
-                margin-right: 1rem;
-            }
+        a:hover {
+            color: white;
         }
         .skill-icon {
             height: 7rem;
         }
         #hs-overall {
-            margin: 0rem 5rem 0rem 0rem;
+            font-size: $font-xmed;
+            text-align: center;
+
+            @include breakpoint-up (large) {
+                margin-bottom: 0rem;
+            }
+            @include breakpoint-up (large) {
+                text-align: left;
+                font-size: $font-xmed;
+            }
         }
         .header-highscores {
-            text-align: left;
-            padding: 1rem 1rem 0rem 1rem;
-
-                @include breakpoint-up (large) {
-                    padding: 6rem 6rem 0rem 6rem;
-                }
+            text-align: center;
         }
         .sub-header-hs {
-            padding: 0rem 5rem;
+            padding: 0rem 1rem;
             margin-bottom: 1rem;
-        }
-        .filter-skill-hs {
-            padding: 3rem;
-        }
-        .filter-account-hs {
-            padding: .75rem;
-        }
 
-        #search-user-hs {
+            @include breakpoint-up (large) {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+        .filter-skill-hs, .filter-account-hs, .filter-time-hs {
             font-size: $font-sm;
+            background-color: white;
+            height: 2.75rem;
+            width: 10rem;
+
+            &:not(:last-child) {
+                margin-right: .25rem;
+            }
+
+            @include breakpoint-up (large) {
+                position: relative;
+                left: 3rem;
+            }
+        }
+        #search-user-hs {
+            width: 30.4rem;
+            font-size: $font-sm;
+            margin-top: .5rem;
             padding: .75rem;
             border: none;
             border-radius: 2px;
+
+            @include breakpoint-up (large) {
+                margin-top: auto;
+                width: auto;
+            }
         }
         table {
+            text-align: right;
+
             @include breakpoint-up (medium) {
                 width: 95vw;
             }
@@ -66,23 +81,18 @@
             
             th {
                 padding: .75rem;
-                background-color: green;
+                background-color: rgb(44, 44, 44);
             }
             #rank {
-                text-align: left;
                 width: 5rem;
             }
-            #player {
-                text-align: left;
-                width: 10rem;
-            }
-            #level, #exp {
-                text-align: right;
+            #player, #level, #exp {
                 width: 10rem;
             }
             td {
+                text-align: right;
                 padding: .5rem;
-                background-color: brown;
+                background-color: rgb(70, 70, 70);
             }
         }
     }
