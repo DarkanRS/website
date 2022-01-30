@@ -35,7 +35,6 @@
         <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
     </div>
 </nav>
-
 <div class="main-container-highscores">
     <div class="sub-container-highscores">
         <div class="header-highscores header-image">
@@ -45,12 +44,14 @@
         <div class="sub-header-hs">
             <h2 id="hs-overall">Overall</h2>
             <div class="flex flex-jc-c">
-                <div class="flex">
+                <div class="select-hs flex">
                     <select class="filter-time-hs">
-                        <option>Time period</option>
-                        <option>Daily</option>
-                        <option>Weekly</option>
-                        <option>Monthly</option>
+                        <div class="filter-option-container">
+                            <option>Time period</option>
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                        </div>
                     </select>
                     <select class="filter-account-hs">
                         <option>Account type</option>
@@ -105,58 +106,59 @@
                 <tbody>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
                     <tr class="row-hover">
                         <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
+                        <td id="player"><a href="#">Username</td>
                         <td><a href="#">2,600</td>
                         <td><a href="#">5,600,000</td>
                     </tr>
-                    <tr class="row-hover">
-                        <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
-                    </tr>
-                    <tr class="row-hover">
-                        <td><a href="#">1</a></td>
-                        <td><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
+        <div class="pagination-container flex flex-jc-c">
+            <div>
+                <ul class="flex flex-ai-c">
+                    <li class="prev-next"><i class="fas fa-arrow-left"></i></li>
+                    <li><a href="#" class="pagination-link">1</a></li>
+                    <li><a href="#" class="pagination-link">2</a></li>
+                    <li><a href="#" class="pagination-link active">3</a></li>
+                    <li class="page-dots">...</li>
+                    <li><a href="#" class="pagination-link">10</a></li>
+                    <li class="prev-next"><i class="fas fa-arrow-right"></i></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-
 <footer class="flex flex-jc-sb flex-ai-c">
     <div class="site-map flex flex-ai-c flex-jc-c">
         <p class="hide-for-mobile">Site Map</p>

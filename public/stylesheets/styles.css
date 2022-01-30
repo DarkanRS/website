@@ -958,6 +958,7 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc-attack .sub-container-calc-attack table {
   padding: .5rem;
+  border-spacing: 1px;
 }
 
 .main-container-calc-attack .sub-container-calc-attack table .tbody-result-data {
@@ -1084,7 +1085,7 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores .sub-container-highscores .sub-header-hs {
   padding: 0rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 64em) {
@@ -1098,6 +1099,10 @@ footer .site-map p, footer .legal p {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.main-container-highscores .sub-container-highscores .skill-icon-hs {
+  height: 75px;
 }
 
 .main-container-highscores .sub-container-highscores .filter-skill-hs, .main-container-highscores .sub-container-highscores .filter-account-hs, .main-container-highscores .sub-container-highscores .filter-time-hs {
@@ -1118,6 +1123,34 @@ footer .site-map p, footer .legal p {
   }
 }
 
+.main-container-highscores .sub-container-highscores select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  padding: 0rem 1rem;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.main-container-highscores .sub-container-highscores .select-hs::after {
+  display: -ms-grid;
+  display: grid;
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  -webkit-clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+          clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
 .main-container-highscores .sub-container-highscores #search-user-hs {
   width: 30.4rem;
   font-size: 0.875rem;
@@ -1136,15 +1169,10 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores .sub-container-highscores table {
   text-align: right;
+  border-spacing: 1px;
 }
 
 @media (min-width: 40em) {
-  .main-container-highscores .sub-container-highscores table {
-    width: 95vw;
-  }
-}
-
-@media (min-width: 64em) {
   .main-container-highscores .sub-container-highscores table {
     width: 95vw;
   }
@@ -1155,6 +1183,12 @@ footer .site-map p, footer .legal p {
   background-color: #2c2c2c;
 }
 
+.main-container-highscores .sub-container-highscores table td {
+  text-align: right;
+  padding: .5rem;
+  background-color: #464646;
+}
+
 .main-container-highscores .sub-container-highscores table #rank {
   width: 5rem;
 }
@@ -1163,9 +1197,57 @@ footer .site-map p, footer .legal p {
   width: 10rem;
 }
 
-.main-container-highscores .sub-container-highscores table td {
+.main-container-highscores .sub-container-highscores table #player {
+  text-align: left;
+}
+
+.main-container-highscores .sub-container-highscores table .player-hs {
   text-align: right;
-  padding: .5rem;
-  background-color: #464646;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container {
+  margin-top: 1rem;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container ul {
+  padding-left: 0rem;
+  list-style: none;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container .prev-next {
+  position: relative;
+  bottom: .05rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container .prev-next:hover {
+  opacity: 70%;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container a {
+  background-color: none;
+  border: solid 1px;
+  border-color: grey;
+  border-radius: 2px;
+  padding: .5rem .75rem;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container a:hover {
+  background-color: #797979;
+  border-radius: 2px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container .active {
+  background-color: #0026ff;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container .page-dots {
+  padding: .3525rem .55rem;
 }
 /*# sourceMappingURL=styles.css.map */
