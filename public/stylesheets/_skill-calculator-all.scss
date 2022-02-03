@@ -101,9 +101,14 @@
                         }
                     }
                     .td-data {
-                        width: 100%;
+                        width: 75%;
                         margin-right: .25rem;
+                        margin-left: 2rem;
                         text-align: right;
+
+                        @include breakpoint-up (medium) {
+                            margin-left: auto;
+                        }
                     }
                 }
                 .tde1, .tde2 {

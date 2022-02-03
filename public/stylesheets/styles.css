@@ -1024,9 +1024,16 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data {
-  width: 100%;
+  width: 75%;
   margin-right: .25rem;
+  margin-left: 2rem;
   text-align: right;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data {
+    margin-left: auto;
+  }
 }
 
 @media (min-width: 40em) {
