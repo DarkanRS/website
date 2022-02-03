@@ -235,11 +235,11 @@ html body .shadow-dropdown {
 }
 
 html body .calc_data_available {
-  background-color: #73dd69;
+  color: lightgreen;
 }
 
 html body .calc_data_unavailable {
-  background-color: #c45f5f;
+  color: lightsalmon;
 }
 
 html body .flex {
@@ -895,7 +895,7 @@ footer .site-map p, footer .legal p {
           align-items: center;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .attack-header h1, .main-container-calc-attack .sub-container-calc-attack .attack-header p {
+.main-container-calc-skill .sub-container-calc-skill .skill-header h1, .main-container-calc-skill .sub-container-calc-skill .skill-header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,20 +904,20 @@ footer .site-map p, footer .legal p {
           justify-content: left;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .attack-header h1 {
+.main-container-calc-skill .sub-container-calc-skill .skill-header h1 {
   margin-bottom: 0rem;
   margin-left: 2rem;
   color: #dedede;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .attack-header p {
+.main-container-calc-skill .sub-container-calc-skill .skill-header p {
   margin-top: 0rem;
   margin-left: 2rem;
   font-size: 1.25rem;
   color: #dedede;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .attack-header a {
+.main-container-calc-skill .sub-container-calc-skill .skill-header a {
   font-size: 0.875rem;
   padding: 1rem 3rem;
   border: 1px solid;
@@ -927,7 +927,7 @@ footer .site-map p, footer .legal p {
   cursor: pointer;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .username-form-container {
+.main-container-calc-skill .sub-container-calc-skill .username-form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,14 +939,14 @@ footer .site-map p, footer .legal p {
 }
 
 @media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .username-form-container {
+  .main-container-calc-skill .sub-container-calc-skill .username-form-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .username-form-container .username-input, .main-container-calc-attack .sub-container-calc-attack .username-form-container .submit-user-button {
+.main-container-calc-skill .sub-container-calc-skill .username-form-container .username-input, .main-container-calc-skill .sub-container-calc-skill .username-form-container .submit-user-button {
   border: none;
   border-radius: 2px;
   font-size: 0.875rem;
@@ -954,12 +954,12 @@ footer .site-map p, footer .legal p {
   outline: none;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .username-form-container .submit-user-button {
+.main-container-calc-skill .sub-container-calc-skill .username-form-container .submit-user-button {
   background-color: #dedede;
   cursor: pointer;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container {
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,33 +968,37 @@ footer .site-map p, footer .legal p {
           justify-content: center;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry {
   width: 95vw;
-  padding-top: 0rem;
+  padding-top: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
-  background-color: cadetblue;
+  background-color: #2b445e;
+}
+
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry input::-webkit-outer-spin-button,
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry input::-webkit-inner-spin-button {
+  padding: .25rem;
+  cursor: pointer;
 }
 
 @media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-top: 0rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry input {
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry input {
   font-size: 0.875rem;
   width: 5rem;
   padding: .5rem;
@@ -1004,47 +1008,59 @@ footer .site-map p, footer .legal p {
 }
 
 @media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry input {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry input {
     width: 9.125rem;
   }
 }
 
-@media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .exp-container, .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .level-container {
-    margin-right: .25rem;
+@media (min-width: 64em) {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .exp-container {
+    margin-right: .75rem;
   }
 }
 
 @media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data-container {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .bonus-container {
+    width: 5rem;
+  }
+}
+
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data-container {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data {
-  width: 75%;
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data {
+  width: 100%;
   margin-right: .25rem;
-  margin-left: 2rem;
   text-align: right;
 }
 
-@media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .table-data-entry .td-data {
-    margin-left: auto;
-  }
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry #xp_modifier {
+  width: 5rem;
 }
 
 @media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .tde1, .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .tde2 {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .tde1, .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .tde2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .data-entry-label {
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .data-entry-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,16 +1070,48 @@ footer .site-map p, footer .legal p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   color: white;
-  height: 3rem;
-  width: 17rem;
+  height: 2rem;
+  width: 100%;
   border: none;
   background-color: none;
 }
 
 @media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .data-entry-label {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .data-entry-label {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 2rem;
+    width: 8rem;
+  }
+}
+
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-data-entry-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+  font-size: 0.875rem;
+  height: 2rem;
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: none;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-data-entry-label {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -1071,16 +1119,7 @@ footer .site-map p, footer .legal p {
   }
 }
 
-@media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .table-data-entry-container .sub-table-data-entry-container .data-entry-label {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    width: 8rem;
-  }
-}
-
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data {
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-td-data-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1089,66 +1128,97 @@ footer .site-map p, footer .legal p {
           justify-content: center;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table {
-  width: 95vw;
-  padding: .5rem;
-  border-collapse: collapse;
-  background-color: #45597e;
-  overflow: hidden;
-}
-
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table #content {
-  text-align: left;
-  padding-left: 1rem;
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-td-data-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 @media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table #content {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-td-data-container {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+.main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-td-data {
+  text-align: right;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .bxp-td-data {
+    margin-left: 0rem;
+  }
+}
+
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table {
+  width: 95vw;
+  padding: .5rem;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table #content {
+  text-align: left;
+  padding: 1rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table #content {
+    padding-right: 1rem;
     padding-left: 3rem;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table th {
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table th {
   font-size: 0.875rem;
   font-weight: 500;
   color: white;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table td {
-  border-bottom: 1px solid;
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table td {
+  background-color: #283950;
+  border-bottom: 1px solid #3f5c81;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .required-exp {
-  font-size: 1.25rem;
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .required-exp {
+  font-size: 2rem;
   text-align: center;
   height: 6rem;
   border: none;
+  background-color: #2b445e;
   color: white;
 }
 
-@media (min-width: 40em) {
-  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .required-exp {
-    font-size: 2rem;
-  }
-}
-
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .required-exp::after {
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .required-exp::after {
   content: "XP";
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .td-data-result {
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .td-data-result {
   text-align: right;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   font-size: 0.875rem;
 }
 
 @media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .td-data-result {
-    padding-right: 3rem;
+  .main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .td-data-result {
+    padding-right: 6rem;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .result-data-table {
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .result-data-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,39 +1228,57 @@ footer .site-map p, footer .legal p {
 }
 
 @media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .result-data-table {
+  .main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .result-data-table {
     margin-top: 0rem;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .label-list-cat {
-  font-size: 1.25rem;
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .label-list-cat {
+  font-size: 0.875rem;
   font-weight: 500;
+  margin-right: .25rem;
+  padding: .40rem 1rem;
+  border-radius: 2px;
+  background-color: #2b445e;
   color: white;
-  margin-right: 1rem;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .list-cat {
-  padding: 1rem 2rem;
-  background-color: #096446;
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .list-cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  margin: 0rem;
+  background-color: #1f2d3f;
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .list-header-container {
-  background-color: #283655;
-}
-
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .list-header {
-  text-align: right;
-  padding: 1.25rem 1rem;
-}
-
-@media (min-width: 64em) {
-  .main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .list-header {
-    padding-right: 3rem;
+@media (min-width: 40em) {
+  .main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .list-cat {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
 }
 
-.main-container-calc-attack .sub-container-calc-attack .sub2-container-calc-data table .cat-options {
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .list-header-container {
+  background-color: #1f2d3f;
+}
+
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .list-header {
+  text-align: right;
+  padding: 1.25rem 2rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .list-header {
+    padding-right: 6rem;
+  }
+}
+
+.main-container-calc-skill .sub-container-calc-skill .sub2-container-calc-data table .cat-options {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
