@@ -29,10 +29,6 @@ app.get('/create-account', function(req, res, next) {
   res.render("create-account", {})
 });
 
-app.get('/login', function(req, res, next) {
-  res.render("login", {})
-});
-
 app.get('/download', function(req, res, next) {
   res.render("download", {})
 });

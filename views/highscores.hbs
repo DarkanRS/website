@@ -2,6 +2,10 @@
     <div class="top-logo flex flex-ai-c">
         <a href="/home">Darkan</a>
     </div>
+    <div class="player-count-container flex flex-ai-c hide-for-mobile">
+        <span id="player-count">100</span>
+        <p>Online</p>
+    </div>
     <div class="hamburger hide-for-desktop">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -31,7 +35,6 @@
             </div>
         </div>
         <a href="/create-account">Create account</a>
-        <a href="/login">Login</a>
         <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
     </div>
 </nav>
@@ -46,15 +49,13 @@
             <div class="flex flex-jc-c">
                 <div class="select-hs flex">
                     <select class="filter-time-hs">
-                        <div class="filter-option-container">
-                            <option>Time period</option>
-                            <option>Daily</option>
-                            <option>Weekly</option>
-                            <option>Monthly</option>
-                        </div>
+                        <optgroup label="Time period"></optgroup>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
                     </select>
                     <select class="filter-account-hs">
-                        <option>Account type</option>
+                        <optgroup label="Account type"></optgroup>
                         <option>All</option>
                         <option>Regular</option>
                         <option>Ironman</option>
@@ -62,7 +63,7 @@
                         <option>Ultimate Ironman</option>
                     </select>
                     <select class="filter-skill-hs">
-                        <option>Skill</option>
+                        <optgroup label="Skill"></optgroup>
                         <option>Attack</option>
                         <option>Strength</option>
                         <option>Defense</option>
@@ -166,7 +167,6 @@
         <div class="hide-for-mobile">
             <a href="/home">Home</a>
             <a href="/create-account">Create account</a>
-            <a href="/login">Log In</a>
             <a href="/download">Download</a>
             <a href="/highscores">Highscores</a>
             <a href="/tools">Tools</a>

@@ -5,7 +5,7 @@
 
         h1 {
             font-size: $font-xmed;
-            margin: 0rem;
+            margin-top: 0rem;
         }
         h2 {
             margin-top: 0rem;
@@ -49,6 +49,7 @@
             background-color: white;
             height: 2.75rem;
             width: 10rem;
+            cursor: pointer;
 
             &:not(:last-child) {
                 margin-right: .25rem;
@@ -73,21 +74,22 @@
             line-height: inherit;
             outline: none;
         }
-        .select-hs::after {
-            display: grid;
-            content: "";
-            width: 0.8em;
-            height: 0.5em;
-            background-color: var(--select-arrow);
-            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        .filter-option-container {
+            display:none;
+            position:absolute;
+            top:100%;
+            right:0;
+            left:0;
+            z-index:999;
         }
         #search-user-hs {
             width: 30.4rem;
             font-size: $font-sm;
-            margin-top: .5rem;
+            margin-top: .25rem;
             padding: .75rem;
             border: none;
             border-radius: 2px;
+            outline: none;
 
             @include breakpoint-up (large) {
                 margin-top: auto;
@@ -106,10 +108,12 @@
             }
             
             th {
+                height: 3rem;
                 padding: .75rem;
                 background-color: rgb(44, 44, 44);
             }
             td {
+                height: 3rem;
                 text-align: right;
                 padding: .5rem;
                 background-color: rgb(70, 70, 70);
@@ -132,6 +136,7 @@
 
         .pagination-container {
             margin-top: 1rem;
+
             ul {
                 padding-left: 0rem;
                 list-style: none;

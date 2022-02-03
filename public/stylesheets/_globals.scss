@@ -35,7 +35,7 @@ html {
                 background-color: rgb(255, 255, 255);
             }
             
-            // - padding
+            // nav - padding
             nav {
                 padding: 2rem;
 
@@ -43,7 +43,7 @@ html {
                     padding: 1rem 8rem;
                 }
             }
-            // - formatting
+            // nav - formatting
             .main-nav {
                 .top-logo a {
                     font-size: $font-med;
@@ -62,6 +62,12 @@ html {
                     &:last-child {
                         margin-right: 0rem;
                     }
+                }
+                p, #player-count {
+                    color: rgb(222, 222, 222);
+                }
+                #player-count {
+                    margin-right: .25rem;
                 }
 
                 ul {
@@ -173,17 +179,17 @@ html {
 
             // header section
             .header-image {
-                padding: 3rem;
+                padding: 6rem 0rem;
 
                 @include breakpoint-up (large) {
-                    padding: 6rem;
+                    padding: 10rem 0rem;
                 }
             }
             .header-image-med {
-                padding: 1rem;
+                padding: 3rem 1rem 6rem 1rem;
 
                 @include breakpoint-up (large) {
-                    padding: 6rem;
+                    padding: 5rem 0rem;
                 }
             }
             // link - design
@@ -205,10 +211,10 @@ html {
             }
             // table cell design
             .calc_data_available {
-                background-color: rgb(255, 255, 255);
+                background-color: rgb(115, 221, 105);
             }
             .calc_data_unavailable {
-                background-color: red;
+                background-color: rgb(196, 95, 95);
             }
             // content - alignment
             .flex {
