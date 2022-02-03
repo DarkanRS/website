@@ -1015,7 +1015,7 @@ footer .site-map p, footer .legal p {
 
 @media (min-width: 64em) {
   .main-container-calc-skill .sub-container-calc-skill .table-data-entry-container .sub-table-data-entry-container .table-data-entry .exp-container {
-    margin-right: .75rem;
+    margin-right: .5rem;
   }
 }
 
