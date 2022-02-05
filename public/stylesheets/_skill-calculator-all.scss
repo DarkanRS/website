@@ -2,32 +2,19 @@
 
     .sub-container-calc-skill {
 
-        .skill-header {
-            
-            h1, p {
-                display: flex;
-                justify-content: left;
-            }
-            h1 {
-                margin-bottom: 0rem;
-                margin-left: 2rem;
-                color: rgb(222, 222, 222);
-            }
-            p {
-                margin-top: 0rem;
-                margin-left: 2rem;
-                font-size: $font-med;
-                color: rgb(222, 222, 222); 
-            }
-            a {
-                font-size: $font-sm;
-                padding: 1rem 3rem;
-                border: 1px solid;
-                border-radius: 2px;
-                border-color: rgb(37, 117, 236);
-                background-color: rgb(22, 53, 99);
-                cursor: pointer;
-            }
+        h1 {
+            text-align: center;
+            margin-top: 4rem;
+            color: rgb(222, 222, 222);
+        }
+        a {
+            font-size: $font-sm;
+            padding: 1rem 3rem;
+            border: 1px solid;
+            border-radius: 2px;
+            border-color: rgb(37, 117, 236);
+            background-color: rgb(22, 53, 99);
+            cursor: pointer;
         }
 
         // username stats table
@@ -35,8 +22,7 @@
         .username-form-container {
             display: flex;
             justify-content: center;
-            margin-top: 1.75rem;
-            margin-bottom: 1.75rem;
+            margin: 4rem 0rem;
 
             @include breakpoint-up (large) {
                 justify-content: center;
@@ -50,7 +36,9 @@
                 outline: none;
             }
             .submit-user-button {
-                background-color: rgb(222, 222, 222);
+                color: white;
+                border: 1px solid rgb(52, 116, 255);
+                background-color: transparent;
                 cursor: pointer;
             }
         }
@@ -73,7 +61,7 @@
                     padding-right: 1rem;
                     padding-bottom: 1rem;
                     padding-left: 1rem;
-                    background-color: rgb(43, 68, 94);
+                    background-color: rgb(33, 33, 33);
     
                     @include breakpoint-up (medium) {
                         display: flex;
@@ -96,12 +84,6 @@
                             width: 9.125rem;
                         }
                     }
-    
-                    .exp-container {
-                        @include breakpoint-up (large) {
-                            margin-right: .5rem;
-                        }
-                    }
                     .bonus-container {
                         @include breakpoint-up (medium) {
                             width: 5rem;
@@ -119,6 +101,12 @@
                         width: 100%;
                         margin-right: .25rem;
                         text-align: right;
+                        background-color: rgb(44, 44, 44);
+                        color: rgb(222, 222, 222);
+
+                        @include breakpoint-up (medium) {
+                            margin-right: .75rem;
+                        }
                     }
                     #xp_modifier {
                         width: 5rem;
@@ -143,7 +131,7 @@
                     background-color: none;
     
                     @include breakpoint-up (medium) {
-                        justify-content: right;
+                        justify-content: left;
                         align-items: flex-end;
                         height: 2rem;
                         width: 8rem;
@@ -180,11 +168,62 @@
                 }
                 .bxp-td-data {
                     text-align: right;
+                    background-color: rgb(44, 44, 44);
+                    color: rgb(222, 222, 222);
 
                     @include breakpoint-up (medium) {
                         margin-left: 0rem;
                     }
                 }
+            }
+        }
+
+        // category list
+
+        .list-cat {
+            display: flex;
+            justify-content: center;
+            width: 95vw;
+            padding: .5rem;
+            border: none;
+            background-color: rgb(44, 44, 44);
+            color: rgb(222, 222, 222);
+
+            .list-cat-container {
+                select:first-child {
+                    margin-right: .75rem;
+                }
+            }
+            .list-cat-container1 {
+                select:first-child {
+                    margin-right: auto;
+                }
+            }
+            .list-cat-container2 {
+                select {
+                    margin-right: .25rem;
+                }
+            }
+            .label-list-cat {
+                font-size: $font-sm;
+                font-weight: 500;
+                margin: .25rem;
+                color: white;
+            }
+            .cat-options {
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+                width: 10rem;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                padding-left: 1.5rem;
+                appearance: none;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                background-color: rgb(255, 255, 255);
+                cursor: inherit;
             }
         }
 
@@ -214,16 +253,23 @@
                     font-weight: 500;
                     color: white;
                 }
+                .list-header {
+                    text-align: right;
+                    padding-right: 2rem;
+
+                    @include breakpoint-up (large) {
+                        padding-right: 6rem;
+                    }
+                }
                 td {
-                    background-color: rgb(40, 57, 80);
-                    border-bottom: 1px solid rgb(63, 92, 129);
+                    border-bottom: 1px solid rgb(73, 73, 73);
                 }
                 .required-exp {
                     font-size: $font-xmed;
                     text-align: center;
                     height: 6rem;
                     border: none;
-                    background-color: rgb(43, 68, 94);
+                    background-color: rgb(18, 18, 18);
                     color: white;
                 }
                 .required-exp::after {
@@ -233,6 +279,7 @@
                     text-align: right;
                     padding: 1rem 2rem 1rem 1rem;
                     font-size: $font-sm;
+                    background-color: rgb(33, 33, 33);
 
                     @include breakpoint-up (large) {
                         padding-right: 6rem;
@@ -245,54 +292,6 @@
                     @include breakpoint-up(large){
                         margin-top: 0rem;
                     }
-                }
-
-                // category list
-
-                .label-list-cat {
-                    font-size: $font-sm;
-                    font-weight: 500;
-                    margin-right: .25rem;
-                    padding: .40rem 1rem;
-                    border-radius: 2px;
-                    background-color: rgb(43, 68, 94);
-                    color: white;
-                }
-                .list-cat {
-                    display: flex;
-                    justify-content: center;
-                    padding: 1rem;
-                    margin: 0rem;
-                    background-color: rgb(31, 45, 63);
-
-                    @include breakpoint-up (medium) {
-                        justify-content: left;
-                    }
-                }
-                .list-header-container {
-                    background-color: rgb(31, 45, 63);
-                }
-                .list-header {
-                    text-align: right;
-                    padding: 1.25rem 2rem;
-
-                    @include breakpoint-up (large) {
-                        padding-right: 6rem;
-                    }
-                }
-                .cat-options {
-                    font-family: inherit;
-                    font-size: inherit;
-                    line-height: inherit;
-                    width: 10rem;
-                    height: 2.10rem;
-                    padding-left: 1.5rem;
-                    appearance: none;
-                    outline: none;
-                    border: none;
-                    border-radius: 2px;
-                    background-color: rgb(255, 255, 255);
-                    cursor: inherit;
                 }
             }
         }  

@@ -40,16 +40,7 @@
 </nav>
 <div class="main-container-calc-skill">
     <div class="sub-container-calc-skill">
-        <div class="skill-header flex flex-jc-sb flex-ai-c">
-            <div>
-                <div>
-                    <div class="flex flex-ai-c">
-                        <h1>Attack Calculator</h1>
-                    </div>
-                    <p>Calculate your targeted experience or level in Attack.</p>
-                </div>
-            </div>
-        </div>
+        <h1>Attack Calculator</h1>
         <section class="table-data-entry-container">
             <form class="username-form-container" action="javascript:getData()">
                 <input class="username-input" type="text" id="username" placeholder="Username" onfocus="this.value=''" required="">
@@ -85,7 +76,22 @@
                                 <label class="bxp-data-entry-label"> % Bonus XP</label>
                             </div>
                             <div class="bxp-td-data-container">
-                                <input class="bxp-td-data" id="xp_modifier" type="number" onfocus="this.value=''" min="0" max="999" value="0">
+                                <input class="bxp-td-data" id="xp_modifier" type="number" onfocus="this.value=''" min="0" max="999" value="0.0" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-jc-c">
+                    <div class="list-cat flex-ai-c">
+                        <div class="list-cat-container1">
+                            <label class="label-list-cat">Combat Style</label>
+                            <div>
+                                <select class="cat-options">
+                                    <option value="Single">Single</option>
+                                    <option value="Shared-Combat">Shared Combat</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -102,19 +108,6 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th colspan="4">
-                            <div class="list-cat flex flex-ai-c">
-                                <label class="label-list-cat">Combat style</label>
-                                <div>
-                                <select class="cat-options">
-                                    <option value="Single">Single</option>
-                                    <option value="Shared">Shared</option>
-                                </select>
-                                </div>
-                            </div>
-                        </th>
-                    </tr>
-                    <tr>
                         <td colspan="4" class="required-exp">
                             <span id="xp_delta">104,273,167</span>
                         </td>
@@ -129,19 +122,19 @@
                 <tbody>
                     <tr class="calc_data_available">
                         <td class="td-data-result">1</td>
-                        <td class="td-data0result" id="content">Cow</td>
+                        <td class="td-data-result" id="content">Cow</td>
                         <td class="td-data-result">2</td>
                         <td class="td-data-result">10</td>
                     </tr>
                     <tr class="calc_data_available">
                         <td class="td-data-result">1</td>
-                        <td class="td-data0result" id="content">Cow</td>
+                        <td class="td-data-result" id="content">Cow</td>
                         <td class="td-data-result">2</td>
                         <td class="td-data-result">10</td>
                     </tr>
                     <tr class="calc_data_unavailable">
                         <td class="td-data-result">1</td>
-                        <td class="td-data0result" id="content">Cow</td>
+                        <td class="td-data-result" id="content">Cow</td>
                         <td class="td-data-result">2</td>
                         <td class="td-data-result">10</td>
                     </tr>
