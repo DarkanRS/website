@@ -52,7 +52,16 @@
         }
         .skill-title {
             width: 12rem;
-            margin-right: 2rem;
+            margin-right: 1rem;
+            
+            @include breakpoint-up (medium) {
+                margin-right: 2rem;
+                margin-left: 1rem;
+            }
+            @include breakpoint-up (large) {
+                margin-right: 4rem;
+                margin-left: 2rem;
+            }
         }
         .skill-description {
             display: flex;

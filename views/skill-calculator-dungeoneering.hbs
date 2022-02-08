@@ -40,7 +40,12 @@
 </nav>
 <div class="main-container-calc-skill">
     <div class="sub-container-calc-skill">
-        <h1>Dungeoneering Calculator</h1>
+        <div>
+            <h1>Dungeoneering Calculator</h1>
+            <div class="flex flex-jc-c">
+                <a href="/skill-calculator" class="button-hover">Skill Menu</a>
+            </div>
+        </div>
         <section class="table-data-entry-container">
             <form class="username-form-container" action="javascript:getData()">
                 <input class="username-input" type="text" id="username" placeholder="Username" onfocus="this.value=''" required="">
@@ -100,6 +105,16 @@
                             </div>
                         </div>
                         <div class="list-cat-container2">
+                            <label class="label-list-cat">Rooms Size</label>
+                            <div>
+                                <select class="cat-options">
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-cat-container2">
                             <label class="label-list-cat">Prestige</label>
                             <div>
                                 <select class="cat-options">
@@ -138,27 +153,10 @@
                             <label class="label-list-cat">Difficulty</label>
                             <div>
                                 <select class="cat-options">
-                                    <option value="All">All</option>
-                                    <option value="Frozen">Frozen</option>
-                                    <option value="Abandoned-1">Abandoned 1</option>
-                                    <option value="Furnished">Furnished</option>
-                                    <option value="Abandoned-2">Abandoned 2</option>
-                                    <option value="Occult">Occult</option>
-                                    <option value="Warped">Warped</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="list-cat-container2">
-                            <label class="label-list-cat">Rooms Open</label>
-                            <div>
-                                <select class="cat-options">
-                                    <option value="All">All</option>
-                                    <option value="Frozen">Frozen</option>
-                                    <option value="Abandoned-1">Abandoned 1</option>
-                                    <option value="Furnished">Furnished</option>
-                                    <option value="Abandoned-2">Abandoned 2</option>
-                                    <option value="Occult">Occult</option>
-                                    <option value="Warped">Warped</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                             </div>
                         </div>

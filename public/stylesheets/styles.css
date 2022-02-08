@@ -229,6 +229,16 @@ html body .button-hover:hover, html body .row-hover:hover {
   transition: opacity 200ms ease-in-out;
 }
 
+html body .button-hover1, html body .row-hover1 {
+  cursor: auto;
+}
+
+html body .button-hover1:hover, html body .row-hover1:hover {
+  opacity: 85%;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
 html body .shadow-dropdown {
   -webkit-box-shadow: 0px 0px 5px black;
           box-shadow: 0px 0px 5px black;
@@ -541,7 +551,6 @@ html body .flex-ai-c {
 .signup-sub-container .signup-form .create-account {
   width: 10rem;
   padding: 1rem;
-  margin-right: 1rem;
   background-color: #263e52;
   border: none;
   border-radius: 5px;
@@ -883,7 +892,21 @@ footer .site-map p, footer .legal p {
 
 .main-container-calc .sub-container-skills .skill-title {
   width: 12rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-calc .sub-container-skills .skill-title {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .main-container-calc .sub-container-skills .skill-title {
+    margin-right: 4rem;
+    margin-left: 2rem;
+  }
 }
 
 .main-container-calc .sub-container-skills .skill-description {
@@ -902,7 +925,9 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-calc-skill .sub-container-calc-skill a {
+  text-align: center;
   font-size: 0.875rem;
+  margin-top: 2rem;
   padding: 1rem 3rem;
   border: 1px solid;
   border-radius: 2px;
@@ -1445,6 +1470,13 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores .sub-container-highscores table #player {
   text-align: left;
+  padding-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores table #player {
+    padding-left: 2rem;
+  }
 }
 
 .main-container-highscores .sub-container-highscores table .player-hs {
@@ -1495,5 +1527,223 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores .sub-container-highscores .pagination-container .page-dots {
   padding: .3525rem .55rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player {
+  color: #dedede;
+}
+
+.main-container-highscores-player .sub-container-highscores-player h1 {
+  font-size: 3.25rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player h2 {
+  font-size: 2rem;
+  margin-top: 0rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player a:hover {
+  color: white;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .skill-icon {
+  height: 7rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player #hs-overall {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores-player .sub-container-highscores-player #hs-overall {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores-player .sub-container-highscores-player #hs-overall {
+    text-align: left;
+    font-size: 2rem;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player .header-highscores-player {
+  text-align: center;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .sub-header-hs {
+  padding: 0rem 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores-player .sub-container-highscores-player .sub-header-hs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player .skill-icon-hs {
+  height: 75px;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .filter-skill-hs, .main-container-highscores-player .sub-container-highscores-player .filter-account-hs, .main-container-highscores-player .sub-container-highscores-player .filter-time-hs {
+  font-size: 0.875rem;
+  background-color: white;
+  height: 2.75rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .filter-skill-hs:not(:last-child), .main-container-highscores-player .sub-container-highscores-player .filter-account-hs:not(:last-child), .main-container-highscores-player .sub-container-highscores-player .filter-time-hs:not(:last-child) {
+  margin-right: .25rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores-player .sub-container-highscores-player .filter-skill-hs, .main-container-highscores-player .sub-container-highscores-player .filter-account-hs, .main-container-highscores-player .sub-container-highscores-player .filter-time-hs {
+    position: relative;
+    left: 3rem;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  padding: 0rem 1rem;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .filter-option-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.main-container-highscores-player .sub-container-highscores-player #search-user-hs {
+  width: 30.4rem;
+  font-size: 0.875rem;
+  margin-top: .25rem;
+  padding: .75rem;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores-player .sub-container-highscores-player #search-user-hs {
+    margin-top: auto;
+    width: auto;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player table {
+  text-align: right;
+  border-spacing: 1px;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores-player .sub-container-highscores-player table {
+    width: 95vw;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player table th {
+  height: 3rem;
+  padding: .75rem;
+  background-color: #2c2c2c;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table td {
+  height: 3rem;
+  text-align: right;
+  padding: .5rem;
+  background-color: #464646;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table td img {
+  margin-right: 1rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table #rank {
+  width: 5rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table #player, .main-container-highscores-player .sub-container-highscores-player table #level, .main-container-highscores-player .sub-container-highscores-player table #exp {
+  width: 10rem;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table #player {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores-player .sub-container-highscores-player table #player {
+    padding-left: 1rem;
+  }
+}
+
+.main-container-highscores-player .sub-container-highscores-player table .player-hs {
+  text-align: right;
+}
+
+.main-container-wmap .sub-container-wmap {
+  background-color: #418686;
+  color: #dedede;
+}
+
+.main-container-wmap .sub-container-wmap .header-wmap {
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  background-color: #314e4e;
+}
+
+.main-container-wmap .sub-container-wmap .header-wmap h1 {
+  margin: 0rem;
+}
+
+.main-container-wmap .sub-container-wmap .canvas-wmap-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container-wmap .sub-container-wmap .canvas-wmap-container .canvas-wmap {
+  height: 30rem;
+  width: 95vw;
+  margin-bottom: 1rem;
+  background-color: #182525;
+}
+
+@media (min-width: 64em) {
+  .main-container-wmap .sub-container-wmap .canvas-wmap-container .canvas-wmap {
+    height: 42rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

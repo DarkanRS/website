@@ -40,7 +40,12 @@
 </nav>
 <div class="main-container-calc-skill">
     <div class="sub-container-calc-skill">
-        <h1>Smithing Calculator</h1>
+        <div>
+            <h1>Smithing Calculator</h1>
+            <div class="flex flex-jc-c">
+                <a href="/skill-calculator" class="button-hover">Skill Menu</a>
+            </div>
+        </div>
         <section class="table-data-entry-container">
             <form class="username-form-container" action="javascript:getData()">
                 <input class="username-input" type="text" id="username" placeholder="Username" onfocus="this.value=''" required="">
@@ -90,8 +95,22 @@
                             <div>
                                 <select class="cat-options">
                                     <option value="All">All</option>
-                                    <option value="Single">Single</option>
-                                    <option value="Shared-Combat">Shared Combat</option>
+                                    <optgroup label="Smelting">
+                                        <option value="Regular-smelting">Regular smelting</option>
+                                        <option value="Super-heating">Super heating</option>
+                                    </optgroup>
+                                    <optgroup label="Smithing">
+                                        <option value="Bronze">Bronze</option>
+                                        <option value="Iron">Iron</option>
+                                        <option value="Steel">Steel</option>
+                                        <option value="Gold">Gold</option>
+                                        <option value="Mithril">Mithril</option>
+                                        <option value="Adamant">Adamant</option>
+                                        <option value="Rune">Rune</option>
+                                    </optgroup>
+                                    <optgroup label="Other">
+                                        <option value="Artisans-Workshop">Artisans Workshop</option>
+                                    </optgroup>
                                 </select>
                             </div>
                         </div>

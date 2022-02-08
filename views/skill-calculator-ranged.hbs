@@ -40,7 +40,12 @@
 </nav>
 <div class="main-container-calc-skill">
     <div class="sub-container-calc-skill">
-        <h1>Ranged Calculator</h1>
+        <div>
+            <h1>Ranged Calculator</h1>
+            <div class="flex flex-jc-c">
+                <a href="/skill-calculator" class="button-hover">Skill Menu</a>
+            </div>
+        </div>
         <section class="table-data-entry-container">
             <form class="username-form-container" action="javascript:getData()">
                 <input class="username-input" type="text" id="username" placeholder="Username" onfocus="this.value=''" required="">
@@ -89,11 +94,15 @@
                             <label class="label-list-cat">Combat Style</label>
                             <div>
                                 <select class="cat-options">
-                                    <option value="Accurate">Accurate</option>
-                                    <option value="Rapid">Rapid</option>
-                                    <option value="Long-Ranged">Long Ranged</option>
-                                    <option value="Chinchompa">Chinchompa</option>
-                                    <option value="Red-Chinchompa">Red Chinchompa</option>
+                                    <optgroup label="Single-way Combat">
+                                        <option value="Accurate">Accurate</option>
+                                        <option value="Rapid">Rapid</option>
+                                        <option value="Long-Ranged">Long Ranged</option>
+                                    </optgroup>
+                                    <optgroup label="Multi-way Combat">
+                                        <option value="Chinchompa">Chinchompa</option>
+                                        <option value="Red-Chinchompa">Red Chinchompa</option>
+                                    </optgroup>
                                 </select>
                             </div>
                         </div>

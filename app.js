@@ -45,6 +45,10 @@ app.get('/highscores', function(req, res, next) {
   res.render("highscores", {})
 });
 
+app.get('/highscores-player', function(req, res, next) {
+  res.render("highscores-player", {})
+});
+
 app.get('/tools', function(req, res, next) {
   res.render("tools", {})
 });

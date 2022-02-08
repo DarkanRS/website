@@ -205,6 +205,14 @@ html {
                 }
                 cursor: pointer;
             }
+            // button & row - hover state (arrow cursor)
+            .button-hover1, .row-hover1 {
+                &:hover {
+                    opacity: 85%;
+                    transition: opacity 200ms ease-in-out;
+                }
+                cursor: auto;
+            }
             // drop shadow
             .shadow-dropdown {
                 box-shadow: 0px 0px 5px rgb(0, 0, 0);
