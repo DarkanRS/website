@@ -37,10 +37,10 @@ html {
             
             // nav - padding
             nav {
-                padding: 2rem;
+                padding: 1.25rem 2rem;
 
                 @include breakpoint-up(large) {
-                    padding: 1rem 8rem;
+                    padding: .5rem 8rem;
                 }
             }
             // nav - formatting
@@ -229,6 +229,9 @@ html {
                 display: flex;
                     &-jc-sb {
                         justify-content: space-between;
+                    }
+                    &-jc-sa {
+                        justify-content: space-around;
                     }
                     &-jc-c {
                         justify-content: center;

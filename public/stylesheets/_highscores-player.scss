@@ -33,6 +33,10 @@
         }
         .header-highscores-player {
             text-align: center;
+            
+            #player-rank::before {
+                content: "Rank #";
+            }
         }
         .sub-header-hs {
             padding: 0rem 1rem;

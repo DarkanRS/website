@@ -39,12 +39,12 @@ html body .bar {
 }
 
 html body nav {
-  padding: 2rem;
+  padding: 1.25rem 2rem;
 }
 
 @media (min-width: 64em) {
   html body nav {
-    padding: 1rem 8rem;
+    padding: .5rem 8rem;
   }
 }
 
@@ -264,6 +264,11 @@ html body .flex-jc-sb {
           justify-content: space-between;
 }
 
+html body .flex-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 html body .flex-jc-c {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -288,59 +293,52 @@ html body .flex-ai-c {
   }
 }
 
-.title-mobile {
-  text-align: center;
-}
-
-.land-top-nav {
-  color: white;
-  text-align: right;
-  padding: 1rem;
-}
-
-.land-top-nav .main-page-link {
-  text-align: right;
-}
-
-.main-container {
+.main-container-hero {
   padding: 4rem 0rem 0rem 0rem;
-  min-height: 100vh;
+  background-color: green;
 }
 
 @media (min-width: 64em) {
-  .main-container {
-    padding: 8rem 0rem;
+  .main-container-hero {
+    padding: 10rem 0rem;
   }
 }
 
 @media (min-width: 87.5em) {
-  .main-container {
+  .main-container-hero {
     padding-top: 12rem;
   }
 }
 
+.main-container-hero .sub-container-hero {
+  height: 85vh;
+  width: 85vw;
+}
+
 @media (min-width: 64em) {
-  .sub-container {
+  .main-container-hero .sub-container-hero {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 49vh;
   }
 }
 
-.sub-container .g1-hero {
-  width: 100%;
-  height: 100%;
+.main-container-hero .sub-container-hero .g1-hero {
   text-align: center;
 }
 
-.sub-container .g1-hero h1 {
+.main-container-hero .sub-container-hero .g1-hero h1 {
   font-size: 4.5rem;
   color: white;
   margin: 0rem;
 }
 
-.sub-container .g1-hero h2 {
+.main-container-hero .sub-container-hero .g1-hero h2 {
   font-size: 1.25rem;
   font-weight: 400;
   color: #dedede;
@@ -349,142 +347,257 @@ html body .flex-ai-c {
   width: auto;
 }
 
-.sub-container .g1-hero .dwn-client {
-  margin-bottom: 1.75rem;
-}
-
-.sub-container .g1-hero .dwn-btn1, .sub-container .g1-hero .dwn-btn2 {
-  font-size: 0.875rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sub-container .g1-hero .dwn-btn1 {
-  padding: 1rem;
-  background-color: #263e52;
-}
-
-.sub-container .g1-hero .dwn-btn1 a {
-  color: white;
-}
-
-.sub-container .g1-hero .dwn-btn2 {
-  padding: 0.875rem;
-  background: none;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #CCC9DC;
-  position: relative;
-  left: .75rem;
-}
-
-.sub-container .g1-hero .material-icons {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sub-container .g1-hero .pf-icon {
-  margin-left: .5rem;
-  font-size: 16px;
-}
-
 @media (min-width: 64em) {
-  .sub-container .g1-hero {
-    padding-left: 10rem;
+  .main-container-hero .sub-container-hero .g1-hero {
     background-color: none;
     text-align: left;
   }
-  .sub-container .g1-hero h2 {
+  .main-container-hero .sub-container-hero .g1-hero h2 {
     line-height: 1.25;
     padding: 0rem;
     font-size: 2rem;
     font-weight: 400;
   }
-  .sub-container .g1-hero .dwn-client {
+  .main-container-hero .sub-container-hero .g1-hero .dwn-client {
     margin-bottom: 0rem;
   }
 }
 
-@media (min-width: 87.5em) {
-  .sub-container .g1-hero {
-    padding-left: 25rem;
+.main-container-hero .sub-container-hero .g1-hero .dwn-client {
+  margin-bottom: 1.75rem;
+}
+
+.main-container-hero .sub-container-hero .g1-hero .dwn-btn {
+  font-size: 0.875rem;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #263e52;
+}
+
+.main-container-hero .sub-container-hero .g1-hero .dwn-btn a {
+  color: white;
+}
+
+.main-container-hero .sub-container-hero .g1-hero .material-icons {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container-hero .sub-container-hero .g1-hero .pf-icon {
+  margin-left: .5rem;
+  font-size: 16px;
+}
+
+.main-container-hero .sub-container-hero .g2-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 64em) {
+  .main-container-hero .sub-container-hero .g2-form-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
-.sub-container .g2-form {
+.main-container-hero .sub-container-hero .g2-form-container .g2-form {
   text-align: center;
   background-color: #24282e;
   width: 22.5rem;
   height: 21.5rem;
+  margin-bottom: 0rem;
+  padding: 2rem 1rem;
   border: none;
   border-radius: 5px;
-  padding: 2rem 1rem;
-  margin-right: auto;
-  margin-bottom: 0rem;
-  margin-left: auto;
   -webkit-box-shadow: 0px 0px 50px black;
           box-shadow: 0px 0px 50px black;
 }
 
-.sub-container .g2-form a {
+.main-container-hero .sub-container-hero .g2-form-container .g2-form a {
   color: white;
 }
 
-@media (min-width: 64em) {
-  .sub-container .g2-form {
-    position: relative;
-    left: 7rem;
-    margin: 0rem;
-  }
-}
-
-.sub-container .g2-form .log-container, .sub-container .g2-form .pass-container {
+.main-container-hero .sub-container-hero .g2-form-container .g2-form .log-container, .main-container-hero .sub-container-hero .g2-form-container .g2-form .pass-container {
   width: 20rem;
   height: 1rem;
   padding: 1.5rem;
   border: 1.25px;
   border-color: none;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-bottom: .75rem;
   background-color: #1b1d22;
   color: white;
   font-size: 0.875rem;
 }
 
-.sub-container .g2-form .forget-pass {
+.main-container-hero .sub-container-hero .g2-form-container .g2-form .forget-pass {
   margin: 1rem;
 }
 
-.sub-container .g2-form .log-in {
+.main-container-hero .sub-container-hero .g2-form-container .g2-form .create-account {
+  font-size: 0.875rem;
+  font-weight: 500;
   width: 20rem;
   padding: 1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #2489db;
   color: white;
-  background-color: #263e52;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
 }
 
-.sub-container .g2-form .create-account {
-  width: 10rem;
-  padding: 1rem;
-  background-color: white;
+.main-container-hero .sub-container-hero .g2-form-container .g2-form .cta-discord {
+  padding: 1rem 3rem;
   border: none;
-  border-radius: 5px;
-  color: black;
-  cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.sub-container .g2-form .cta-discord {
+  border-radius: 2px;
+  background-color: #4053e4;
   color: white;
   position: relative;
-  top: 3rem;
+  top: 1rem;
+}
+
+.comm-data-container {
+  background-color: blue;
+}
+
+.comm-data-container .comm-data-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (10rem)[1];
+      grid-template-rows: repeat(1, 10rem);
+  padding-right: 10vw;
+  padding-left: 10vw;
+  position: relative;
+  bottom: 2rem;
+}
+
+.comm-data-container .comm-data-wrapper .comm-data {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: lightblue;
+}
+
+.comm-data-container .comm-data-wrapper .comm-data h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+@media (min-width: 40em) {
+  .comm-data-container .comm-data-wrapper .comm-data h2 {
+    font-size: 1.25rem;
+  }
+}
+
+.banner-cta-container {
+  background-color: lightcoral;
+}
+
+.banner-cta-container .banner-cta-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.banner-cta-container .banner-cta-wrapper .banner-cta {
+  text-align: center;
+  height: 12rem;
+  width: 75vw;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: lightcyan;
+}
+
+.banner-cta-container .banner-cta-wrapper .banner-cta .crt-acc-btn {
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.banner-cta-container .banner-cta-wrapper .banner-cta .crt-acc-btn a {
+  color: black;
+}
+
+.banner-cta-container .banner-cta-wrapper .banner-cta .disc-btn {
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background-color: none;
+  cursor: pointer;
+}
+
+.banner-cta-container .banner-cta-wrapper .banner-cta .disc-btn a {
+  color: black;
+}
+
+.section-a-container {
+  background-color: lightslategray;
+}
+
+.section-a-container .section-a-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.section-a-container .section-a-wrapper .section-a {
+  width: 75vw;
+}
+
+.section-a-container .section-a-wrapper .section-a h2 {
+  text-align: center;
+  font-size: 3.25rem;
+  color: white;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container {
+  height: 20rem;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
 }
 
 .signup-main-container {
@@ -1572,6 +1685,10 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores-player .sub-container-highscores-player .header-highscores-player {
   text-align: center;
+}
+
+.main-container-highscores-player .sub-container-highscores-player .header-highscores-player #player-rank::before {
+  content: "Rank #";
 }
 
 .main-container-highscores-player .sub-container-highscores-player .sub-header-hs {
