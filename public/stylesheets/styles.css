@@ -142,7 +142,7 @@ html body .dropdown-content p {
 }
 
 html body .dropdown-content a:hover {
-  background-color: #203144;
+  background-color: rgba(124, 124, 124, 0.25);
   border-radius: 2.5px;
   -webkit-transition: background-color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out;
@@ -328,6 +328,12 @@ html body .flex-ai-c {
   }
 }
 
+@media (min-width: 87.5em) {
+  .main-container-hero .sub-container-hero {
+    width: 75vw;
+  }
+}
+
 .main-container-hero .sub-container-hero .g1-hero {
   text-align: center;
 }
@@ -339,7 +345,7 @@ html body .flex-ai-c {
 }
 
 .main-container-hero .sub-container-hero .g1-hero h2 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #dedede;
   margin-top: 0rem;
@@ -416,8 +422,8 @@ html body .flex-ai-c {
   padding: 2rem 1rem;
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 50px black;
-          box-shadow: 0px 0px 50px black;
+  -webkit-box-shadow: 0px 0px 20px #242424;
+          box-shadow: 0px 0px 20px #242424;
 }
 
 .main-container-hero .sub-container-hero .g2-form-container .g2-form a {
@@ -464,7 +470,7 @@ html body .flex-ai-c {
 }
 
 .comm-data-container {
-  background-color: blue;
+  background-color: lightslategray;
 }
 
 .comm-data-container .comm-data-wrapper {
@@ -472,31 +478,214 @@ html body .flex-ai-c {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (10rem)[1];
-      grid-template-rows: repeat(1, 10rem);
+  -ms-grid-rows: (8rem)[1];
+      grid-template-rows: repeat(1, 8rem);
   padding-right: 10vw;
   padding-left: 10vw;
   position: relative;
   bottom: 2rem;
 }
 
+@media (min-width: 64em) {
+  .comm-data-container .comm-data-wrapper {
+    padding-right: 15vw;
+    padding-left: 15vw;
+  }
+}
+
 .comm-data-container .comm-data-wrapper .comm-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 7.5rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 4px;
   background-color: lightblue;
+  -webkit-box-shadow: 0px 5px 15px #505050;
+          box-shadow: 0px 5px 15px #505050;
 }
 
-.comm-data-container .comm-data-wrapper .comm-data h2 {
+.comm-data-container .comm-data-wrapper .comm-data strong {
+  text-align: center;
   font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0rem;
 }
 
 @media (min-width: 40em) {
-  .comm-data-container .comm-data-wrapper .comm-data h2 {
+  .comm-data-container .comm-data-wrapper .comm-data strong {
     font-size: 1.25rem;
   }
+}
+
+.comm-data-container .comm-data-wrapper .comm-data .comm-info:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.section-a-container {
+  background-color: lightslategray;
+}
+
+.section-a-container .section-a-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1.5rem;
+}
+
+.section-a-container .section-a-wrapper .section-a {
+  width: 95vw;
+}
+
+.section-a-container .section-a-wrapper .section-a h2 {
+  text-align: center;
+  font-size: 3.25rem;
+  color: white;
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a h2 {
+    font-size: 4.5rem;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  row-gap: .25rem;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
+    row-gap: 1rem;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 {
+  height: 75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h3 {
+  font-size: 3.25rem;
+  margin-top: 8rem;
+  margin-bottom: 0rem;
+  padding-left: 4rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h3 {
+    margin-right: 4rem;
+    margin-left: 4rem;
+    padding-left: 0rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h3 {
+    margin-right: auto;
+    margin-left: 8rem;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 8rem;
+  padding: 0rem 4rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
+    width: 75vw;
+    margin-left: 4rem;
+    text-align: left;
+    padding: 0rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
+    margin-left: 8rem;
+    width: 55vw;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 .cta-developers, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-developers {
+  color: #3ca1ff;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 .cta-developers:hover, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-developers:hover {
+  text-decoration: underline;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 .div1, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 .div2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .div1, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .div2 {
+  height: 75vh;
+  width: 85vw;
+  font-size: 3.25rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: lightseagreen;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 a {
+  color: #3ca1ff;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 a:hover {
+  text-decoration: underline;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
+  height: 75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h3 {
+  text-align: center;
+  font-size: 3.25rem;
+  margin-top: 8rem;
+  margin-bottom: 0rem;
+  padding: 0rem 2rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h3 {
+    margin-right: 4rem;
+    margin-left: 4rem;
+    padding: 0rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h3 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0rem;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 .levels {
+  margin-bottom: 8rem;
 }
 
 .banner-cta-container {
@@ -548,56 +737,6 @@ html body .flex-ai-c {
 
 .banner-cta-container .banner-cta-wrapper .banner-cta .disc-btn a {
   color: black;
-}
-
-.section-a-container {
-  background-color: lightslategray;
-}
-
-.section-a-container .section-a-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.section-a-container .section-a-wrapper .section-a {
-  width: 75vw;
-}
-
-.section-a-container .section-a-wrapper .section-a h2 {
-  text-align: center;
-  font-size: 3.25rem;
-  color: white;
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  row-gap: 1rem;
-  grid-auto-rows: minmax(50px, auto);
-}
-
-@media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 2rem;
-            column-gap: 2rem;
-  }
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container {
-  height: 20rem;
-  border: none;
-  border-radius: 4px;
-  background-color: black;
 }
 
 .signup-main-container {
@@ -815,24 +954,19 @@ footer .site-map p, footer .legal p {
 }
 
 .download-main-container h1 {
+  font-size: 3.25rem;
   text-align: center;
   color: white;
 }
 
 .download-main-container h2 {
-  margin-top: 0rem;
+  margin: 0rem;
   color: #dedede;
 }
 
 @media (min-width: 64em) {
   .download-main-container {
-    padding: 2rem 0rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .download-main-container {
-    padding-top: 6rem;
+    padding: 6rem 0rem;
   }
 }
 
@@ -841,10 +975,10 @@ footer .site-map p, footer .legal p {
   margin-top: 3rem;
 }
 
-.download-sub-container .download-client1, .download-sub-container .download-client2 {
+.download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
   text-align: center;
   background-color: #24282e;
-  width: 30rem;
+  width: 32rem;
   height: 20rem;
   border: none;
   border-radius: 5px;
@@ -855,16 +989,14 @@ footer .site-map p, footer .legal p {
   font-size: 1.25rem;
 }
 
-.download-sub-container .download-client1 a, .download-sub-container .download-client2 a {
+.download-sub-container .download-client1 a, .download-sub-container .download-client2 a, .download-sub-container .download-client3 a {
   color: white;
 }
 
 @media (min-width: 40em) {
-  .download-sub-container .download-client1, .download-sub-container .download-client2 {
+  .download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
     text-align: center;
     background-color: #24282e;
-    width: 30rem;
-    height: 20rem;
     border: none;
     border-radius: 5px;
     padding: 2rem 1rem;
@@ -872,28 +1004,17 @@ footer .site-map p, footer .legal p {
     -webkit-box-shadow: 0px 0px 50px black;
             box-shadow: 0px 0px 50px black;
   }
-  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a {
+  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a, .download-sub-container .download-client3 a {
     color: white;
   }
 }
 
 @media (min-width: 64em) {
-  .download-sub-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .download-sub-container .download-client1 {
-    margin-right: 6.5rem;
-  }
-  .download-sub-container .download-client1, .download-sub-container .download-client2 {
+  .download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
     text-align: center;
     background-color: #24282e;
-    width: 25rem;
-    height: 20rem;
+    width: 32rem;
+    height: 10rem;
     border: none;
     border-radius: 5px;
     padding: 2rem 1rem;
@@ -901,7 +1022,7 @@ footer .site-map p, footer .legal p {
     -webkit-box-shadow: 0px 0px 50px black;
             box-shadow: 0px 0px 50px black;
   }
-  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a {
+  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a, .download-sub-container .download-client3 a {
     color: white;
   }
 }
