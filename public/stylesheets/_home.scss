@@ -2,11 +2,11 @@
     padding: 10vh 0rem 2rem 0rem;
 
     @include breakpoint-up(large) {
-        padding-top: 12vh;
+        padding-top: 15vh;
         padding-bottom: 15rem;
     }
     @include breakpoint-up(xlarge) {
-        padding-top: 14vh;
+        padding-top: 18vh;
     }
 
     .sub-container-hero {
@@ -89,7 +89,7 @@
                 padding: 1rem 4rem;
                 border: none;
                 border-radius: 2px;
-                background-color: rgb(38, 62, 82);
+                background-color: rgb(0, 102, 186);
     
                 a {
                     color: white;
@@ -158,7 +158,6 @@
            p {
                text-align: center;
                font-size: $font-med;
-               margin: 2rem;
                color: white;
 
                @include breakpoint-up (large) {
@@ -168,7 +167,7 @@
 
             .comm-info {
 
-                @include breakpoint-up (medium) {
+                @include breakpoint-up (large) {
                     &:not(:last-child) {
                         margin-right: 1rem;
                         margin-bottom: auto;
@@ -192,48 +191,61 @@
             width: 95vw;
             color: white;
 
-            h2 {
-                font-size: $font-xmed;
-                color: white;
-                margin-top: 4rem;
-                margin-bottom: 1rem;
-                padding: 0rem 2rem;
-
-                @include breakpoint-up (medium) {
-                    font-size: $font-lg;
-                }
+            a, a:visited, a:hover {
+                text-decoration: none;
+                color: rgb(0, 132, 255);
             }
-            p {
-                font-size: $font-med;
-                margin-bottom: 2rem;
-                padding: 0rem 2rem;
+            .game-content-header {
+                text-align: center;
 
-                @include breakpoint-up (medium) {
-                    padding-right: 5rem;
-                    padding-left: 5rem;
-                }
-
-                @include breakpoint-up (large) {
+                h2 {
                     font-size: $font-xmed;
-                    padding-right: 10rem;
-                    padding-left: 10rem;
+                    color: white;
+                    margin-top: 4rem;
+                    margin-bottom: 1rem;
+    
+                    @include breakpoint-up (medium) {
+                        font-size: $font-lg;
+                    }
                 }
+                p {
+                    font-size: $font-med;
+                    margin-bottom: 2rem;
+                    
+    
+                    @include breakpoint-up (medium) {
+                        padding-right: 5rem;
+                        padding-left: 5rem;
+                    }
+    
+                    @include breakpoint-up (large) {
+                        padding-right: 10rem;
+                        padding-left: 10rem;
+                    }
+    
+                    @include breakpoint-up (xlarge) {
+                        padding-right: 15rem;
+                        padding-left: 15rem;
+                    }
+                }
+                h2, p {
+                    @include breakpoint-up (large) { 
+                        padding: 0rem 4rem;
+                    }
+                }
+                margin-bottom: 8rem;
+                padding: 0rem 2rem;
 
-                @include breakpoint-up (xlarge) {
-                    padding-right: 15rem;
-                    padding-left: 15rem;
-                }
-            }
-            h2, p {
                 @include breakpoint-up (medium) {
-                    text-align: center;
+                    margin-bottom: 12rem;
                 }
             }
-
+            .game-content-header::before {
+                content: "";
+                background: url(/images/landing-page/client.png);
+            }
             .game-content-container {
-
                 .game-content-wrapper {
-
                     .game-content {
                         display: grid;
                         grid-template-columns: repeat(1, 1fr);
@@ -242,43 +254,7 @@
 
                         // containers (individual)
 
-                        .content-container2 {
-                            border: none;
-                            border-radius: 2px;
-                            color: white;
-
-                            h3 {
-                                text-align: left;
-                                margin-bottom: 0rem;
-                                padding-right: 1rem;
-                                padding-left: 1rem;
-
-                                @include breakpoint-up (medium) {
-                                    margin-right: 4rem;
-                                    margin-left: 4rem;
-                                    padding: 0rem;
-                                }
-                                @include breakpoint-up (large) {
-                                    margin-right: auto;
-                                    margin-left: auto;
-                                }
-                            }
-                            p {
-                                text-align: left;
-                                margin-top: 0rem;
-                            }
-                        }
-                        .content-container3 {
-                            text-align: center;
-                        }
-                        
-                        // containers (grouped)
-
-                        .content-container1, .content-container3 {
-                            border: none;
-                            border-radius: 2px;
-                            color: white;
-
+                        .content-container1 {
                             h3 {
                                 @include breakpoint-up (medium) {
                                     padding-right: 0rem;
@@ -289,10 +265,69 @@
                                 }
                             }
                         }
+                        .content-container2 {
+                            .instructions-container {
+                                display: flex;
+                                justify-content: center;
+                                font-size: $font-med;
+                            }
+                            .instructions {
+                                li {
+                                    margin-bottom: .75rem;
+                                }
+                            }
+                        }
+                        .content-container3 {
+                
+                        }
+                        
+                        // containers (grouped)
+
+                        .content-container1, .content-container2, .content-container3 {
+                            padding: 0vh 5vw 5vh 5vw;
+                            background-color: darkblue;
+                        }
+                        .content-container2, .content-container3 {
+                                h2 {
+                                    text-align: center;
+                                    font-size: $font-xmed;
+                                    color: white;
+                                    margin-top: 2rem;
+                                    margin-bottom: auto;
+                    
+                                    @include breakpoint-up (medium) {
+                                        font-size: $font-lg;
+                                    }
+                                }
+                                p {
+                                    text-align: center;
+                                    font-size: $font-med;                                    
+                    
+                                    @include breakpoint-up (medium) {
+                                        padding-right: 5rem;
+                                        padding-left: 5rem;
+                                    }
+                    
+                                    @include breakpoint-up (large) {
+                                        padding-right: 10rem;
+                                        padding-left: 10rem;
+                                    }
+                    
+                                    @include breakpoint-up (xlarge) {
+                                        padding-right: 15rem;
+                                        padding-left: 15rem;
+                                    }
+                                }
+                                h2, p {
+                                    @include breakpoint-up (large) { 
+                                        padding: 0rem 4rem;
+                                    }
+                                }
+                        }
 
                         // world-banners (individual)
 
-                        .world1-banner {
+                        .world1-banner {                            
                             p {
                                 text-align: left;
                             }
@@ -301,11 +336,10 @@
                                 background-color: purple;
                             }
                         }
-
                         .world2-banner {
 
                             @include breakpoint-up (medium) {
-                                p, h4 {
+                                p, h3 {
                                     text-align: right;
                                 }
                             }
@@ -319,11 +353,8 @@
                         // world-banners (grouped)
 
                         .world1-banner, .world2-banner {
-                            padding: 0rem 2rem;
-                            
-                            h4 {
-                                font-size: $font-med;
-                                margin-top: 2rem;
+                            h3 {
+                                font-size: $font-xmed;
                                 margin-bottom: 1rem;
 
                                 @include breakpoint-up (medium) {
@@ -332,44 +363,15 @@
                             }
                             p {
                                 font-size: $font-med;
-                                margin-bottom: 2rem;
+                                margin-bottom: 1rem;
                                 padding: 0rem;
+
+                                @include breakpoint-up (medium) {
+                                    font-size: $font-med;
+                                }
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-// CTA banner - create account & discord
-
-.banner-cta-container {
-
-    .banner-cta-wrapper {
-        display: flex;
-        justify-content: center;
-
-        .banner-cta {
-            text-align: center;
-            border: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: lightcyan;
-
-            .download-btn {
-                font-size: $font-sm;
-                padding: .5rem 1rem;
-                border: 1px solid grey;
-                border-radius: 2px;
-                background-color: none;
-
-                cursor: pointer;
-                
-                a {
-                    color: black;
                 }
             }
         }
