@@ -1,11 +1,11 @@
 import React from 'react';
-import "./GlobalHeader.scss"
+//import "./GlobalHeader.scss"
 
 function GlobalHeader(props) {
   return (
       <nav className="main-nav flex flex-ai-c flex-jc-sb">
         <div className="top-logo flex flex-ai-c">
-          <a href="/home"><img src="/logo.svg" /></a>
+          <a href="/"><img src="/logo.svg" /></a>
         </div>
         <div className="hamburger hide-for-desktop">
           <span className="bar"></span>
@@ -22,7 +22,7 @@ function GlobalHeader(props) {
               </ul>
             </div>
           </div>
-          <a href="/highscores">Highscores</a>
+          <a href="/highscores/all/1">Highscores</a>
           <div className="dropdown">
             <p className="dropbtn flex flex-ai-c">Tools<i className="fas fa-caret-down dwn-arrow"></i></p>
             <div className="dropdown-content">
@@ -30,7 +30,7 @@ function GlobalHeader(props) {
                 <li><a href="/ge-tracker">GE Tracker</a></li>
                 <li><a href="/skill-calculator">Skill Calculator</a></li>
                 <li><a href="/bug-reporter">Bug Reporter</a></li>
-                <li><a href="/world-map">World Map</a></li>
+                <li><a href="https://darkan.org/worldmap.html">World Map</a></li>
                 <li><a href="/api">API Documents</a></li>
               </ul>
             </div>
