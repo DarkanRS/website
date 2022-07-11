@@ -1,48 +1,130 @@
-<nav class="main-nav flex flex-ai-c flex-jc-sb">
-    <div class="top-logo flex flex-ai-c">
-        <a href="/">Darkan</a>
-    </div>
-    <div class="hamburger hide-for-desktop">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <div class="flex flex-ai-c hide-for-mobile">
-        <a href="/highscores">Highscores</a>
-    </div>
-</nav>
-<div class="main-container-hero flex flex-jc-c">
-    <div class="sub-container-hero">
-        <div class="g1-hero">
-            <h1>Darkan</h1>
-            <p>Relive the greatest era of RuneScape as it was in 2012.</p>
-            <div class="dwn-client">
-                <a href="/download" class="dwn-btn">Download Client</a>
+<div class="top-container">
+    <nav class="nav-wrapper">
+        <div class="nav-container">
+            <div class="player-count-container flex flex-ai-c">
+                <span id="player-count"><strong>100</strong></span>
+                <p>Players Online</p>
             </div>
-            <p id="no-igp">No in-game purchases</p>
+            <div class="nav-links flex flex-ai-c">
+                <div class="dropdown">
+                    <p class="dropbtn flex flex-ai-c">Explore<i class="fas fa-caret-down dwn-arrow"></i></p>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-links">
+                                <li><a href="#">Discord</a></li>
+                                <li><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Github</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <a href="/highscores">Highscores</a>
+                <div class="dropdown">
+                <p class="dropbtn flex flex-ai-c">Tools<i class="fas fa-caret-down dwn-arrow"></i></p>
+                    <div class="dropdown-content">
+                        <ul class="dropdown-links">
+                            <li><a href="/world-map">World Map</a></li>
+                            <li><a href="/api">API Documents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
+            </div>
         </div>
-        <div class="g2-hero-img">
-            
+    </nav>
+    <div class="main-container-hero flex flex-jc-c">
+        <img src="/images/landing-page/lumbridge-lg.png" alt="runescape_2012" class="hero-img">
+        <div class="sub-container-hero">
+            <div class="hero">
+                <h1>Darkan</h1>
+                <p>Play Runescape in 2012</p>
+                <div class="dwn-client">
+                    <a href="/download" class="dwn-btn button-hover">Play Now</a>
+                </div>
+                <p id="no-igp">No in-game purchases, ever.</p>
+            </div>
         </div>
     </div>
 </div>
-<footer class="flex flex-jc-sb flex-ai-c">
-    <div class="site-map flex flex-ai-c flex-jc-c">
-        <a href="#" class="hide-for-desktop">Site Map</a>
-        <div class="hide-for-mobile">
-            <a href="/">Home</a>
-            <a href="/highscores">Highscores</a>
-        </div>        
-    </div>
-    <div></div>
-        <a href="/">Darkan</a>
-    </div>
-    <div class="legal flex flex-ai-c flex-jc-c">
-        <p>No in-game purchases</p>
-        <p>Darkan @ 2022</p>
-        <div>
-            <a href="/terms">Terms</a>
-            <a href="/privacy-policy">Privacy</a>
+<section class="section-a-container">
+    <div class="section-a-wrapper">
+        <div class="section-a">
+            <div class="game-content-header">
+                <h2>Experience two servers in one client</h2>
+                <p></p>
+            </div>
+            <div class="game-content-container">
+                <div class="game-content-wrapper">
+                    <div class="game-content">
+                        <div class="content-container1">
+                            <div class="content-container">
+                                <div class="world1-banner">
+                                    <div class="world1-container">
+                                        <div class="world-container">
+                                            <h3>World 1</h3>
+                                            <p>Play RuneScape as it was in 2012. As a full remake, you can progress through a variety of nostalgic content.</p>
+                                        </div>
+                                    </div>
+                                    <div class="w1-image">
+                                        <div class="w1-image"><img src="images/landing-page/desktop-w2.png"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="world1-list">
+                                        <li>25 Skills</li>
+                                        <li>15+ Quests</li>
+                                        <li>5+ Diaries</li>
+                                        <li>Loyalty Points</li>
+                                        <li>Mini-games</li>
+                                        <li>And more!</li>
+                                    </ul>
+                                </div>
+                                <div class="world2-banner">
+                                    <div class="w2-image hide-for-mobile"><img src="images/landing-page/desktop-w2.png"></div>
+                                    <div class="world2-container">
+                                        <div class="world-container">
+                                            <h3>World 2</h3>
+                                            <p>If you're looking to play Darkan, but want more of an RSPS feel, then world 2 would be perfect for you!</p>
+                                        </div>
+                                    </div>
+                                    <div class="w2-image hide-for-desktop"><img src="images/landing-page/desktop-w2.png"></div>
+                                </div>
+                                <div>
+                                    <ul class="world2-list">
+                                        <li>25x EXP</li>
+                                        <li>Edgeville home</li>
+                                        <li>Supply Shop</li>
+                                        <li>Slayer Portals</li>
+                                        <li>And more!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-container2">
+                            <div class="section-header">
+                                <h2>A community project</h2>
+                                <p>Darkan is an <a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">open source project</a> with a communuity dedicated to bring back RuneScape in 2012.</p>
+                            </div>
+                        </div>
+                        <div class="content-container3">
+                            <div class="cta-container">
+                                <h2>Play Now!</h2>
+                                <a href="/download"><span class="material-symbols-outlined button-hover">download_for_offline</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+<footer>
+    <div class="site-map">
+        <div class="f-link-container">
+            <div class="f-link"><a href="/">Darkan</a></div>
+            <div class="f-link"><a href="/download">Download</a></div>
+            <div class="f-link"><a href="/highscores">Highscores</a></div>
+            <div class="f-link"><a href="/#">Discord</a></div>
+            <div class="f-link"><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Developers</a></div>
+            <div class="f-link"><p>No in-game purchases</p></div>
+            <div class="f-link"><p>Darkan @ 2022</p></div>
+        </div>        
     </div>
 </footer>

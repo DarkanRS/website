@@ -13,77 +13,113 @@ html *, html *::before, html *::after {
 }
 
 html body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Aeonik, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5;
   font-size: 0.875rem;
+  font-weight: 600;
   padding: 0rem;
   margin: 0rem;
-  background-color: #161616;
-  color: black;
-  cursor: auto;
-}
-
-html body .hamburger {
-  padding-right: 0rem;
-  cursor: pointer;
-}
-
-html body .bar {
-  display: block;
-  width: 1.5rem;
-  height: .125rem;
-  margin: .25rem auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
+  background: #0d181c;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0d181c), color-stop(51%, #213944), to(#0d181c));
+  background: linear-gradient(0deg, #0d181c 0%, #213944 51%, #0d181c 100%);
+  color: #dedede;
+  cursor: default;
 }
 
 html body nav {
-  padding: 2rem 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 40em) {
+  html body nav {
+    padding: 1rem 2rem;
+  }
 }
 
 @media (min-width: 64em) {
   html body nav {
-    padding: 1.5rem 8rem;
+    padding: 1rem 2rem;
   }
 }
 
-html body .main-nav .top-logo a {
+@media (min-width: 87.5em) {
+  html body nav {
+    padding: 1rem 4rem;
+  }
+}
+
+html body .nav-wrapper .top-logo a {
   font-size: 1.25rem;
 }
 
-html body .main-nav a {
+html body .nav-wrapper a {
   position: relative;
   font-size: 0.875rem;
   margin-right: 2rem;
-  color: #dedede;
 }
 
-html body .main-nav a:hover {
+html body .nav-wrapper a:hover {
   color: white;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
 }
 
-html body .main-nav a:last-child {
+html body .nav-wrapper a:last-child {
   margin-right: 0rem;
 }
 
-html body .main-nav p, html body .main-nav #player-count {
+html body .nav-wrapper p, html body .nav-wrapper #player-count {
   color: #dedede;
 }
 
-html body .main-nav #player-count {
-  margin-right: .25rem;
+html body .nav-wrapper #player-count {
+  margin-right: .5rem;
 }
 
-html body .main-nav ul {
+html body .nav-wrapper ul {
   margin: 0rem;
   padding: 0rem;
 }
 
-html body .main-nav li {
+html body .nav-wrapper li {
   list-style-type: none;
+}
+
+@media (max-width: 29.9999em) {
+  html body .nav-wrapper {
+    display: none;
+  }
+}
+
+html body .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .nav-container p, html body .nav-container a {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 40em) {
+  html body .nav-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+html body .nav-links {
+  margin-left: 2rem;
+}
+
+@media (min-width: 40em) {
+  html body .nav-links {
+    margin-left: 4rem;
+  }
 }
 
 html body .dropbtn {
@@ -111,8 +147,9 @@ html body .dropdown p {
 html body .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #202020;
-  min-width: 15rem;
+  background-color: rgba(255, 255, 255, 0.116);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 11rem;
   border-radius: 2.5px;
   top: 3.25rem;
   left: -1rem;
@@ -127,7 +164,6 @@ html body .dropdown-content a {
   font-size: 0.875rem;
   text-align: left;
   padding: .75rem;
-  text-decoration: none;
   display: block;
 }
 
@@ -138,11 +174,10 @@ html body .dropdown-content p {
   padding: .25rem;
   text-decoration: none;
   display: block;
-  color: #919191;
 }
 
 html body .dropdown-content a:hover {
-  background-color: rgba(124, 124, 124, 0.25);
+  background-color: #212b30;
   border-radius: 2.5px;
   -webkit-transition: background-color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out;
@@ -153,70 +188,77 @@ html body .dropdown:hover .dropdown-content {
 }
 
 html body .dwn-arrow {
-  margin-left: .25rem;
+  margin-left: .375rem;
+  margin-top: .20rem;
 }
 
 html body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #161616;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  background-color: #141414;
+  padding: 5vh 10vw;
   color: #dedede;
-  padding: 1rem;
 }
 
-html body footer p {
-  margin: 0rem;
-}
-
-html body footer a {
-  color: #dedede;
+@media (min-width: 64em) {
+  html body footer {
+    font-size: 0.875rem;
+    padding: 2.5vh 5vw;
+  }
 }
 
 html body footer a:hover {
   color: white;
 }
 
-html body footer .site-map a:not(:last-child), html body footer .legal a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-html body footer .site-map p, html body footer .legal p {
-  margin-right: 1rem;
-}
-
-@media (min-width: 64em) {
-  html body footer {
-    height: auto;
+@media (min-width: 40em) {
+  html body footer .site-map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
 }
 
-html body .header-image {
-  padding: 6rem 0rem;
+html body footer .site-map a, html body footer .site-map p {
+  margin-right: 0rem;
 }
 
 @media (min-width: 64em) {
-  html body .header-image {
-    padding: 10rem 0rem;
+  html body footer .site-map a, html body footer .site-map p {
+    margin-right: 2.5rem;
   }
 }
 
-html body .header-image-med {
-  padding: 3rem 1rem 6rem 1rem;
+html body footer .site-map .f-link:not(:last-child) {
+  margin-bottom: .5rem;
 }
 
 @media (min-width: 64em) {
-  html body .header-image-med {
-    padding: 5rem 0rem;
+  html body footer .site-map .f-link:not(:last-child) {
+    margin-bottom: 0rem;
   }
+}
+
+@media (min-width: 64em) {
+  html body footer .site-map .f-link-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+html body footer .f-link {
+  padding: .25rem;
 }
 
 html body a, html body a:visited, html body a:hover {
   text-decoration: none;
-  color: white;
+  color: #dedede;
 }
 
 html body .button-hover, html body .row-hover {
@@ -293,225 +335,98 @@ html body .flex-ai-c {
   }
 }
 
+.top-container {
+  height: 100vh;
+}
+
 .main-container-hero {
-  padding: 10vh 0rem 2rem 0rem;
+  padding-top: 20vh;
+}
+
+.main-container-hero .hero-img {
+  display: inline;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: .1;
+  height: 100%;
 }
 
 @media (min-width: 64em) {
-  .main-container-hero {
-    padding-top: 15vh;
-    padding-bottom: 15rem;
+  .main-container-hero .hero-img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
-@media (min-width: 87.5em) {
-  .main-container-hero {
-    padding-top: 18vh;
-  }
-}
-
-.main-container-hero .sub-container-hero {
-  height: 75vh;
-  width: 85vw;
-}
-
-@media (min-width: 40em) {
-  .main-container-hero .sub-container-hero {
-    height: 80vh;
-  }
-}
-
-@media (min-width: 64em) {
-  .main-container-hero .sub-container-hero {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 50vh;
-    width: 65vw;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .main-container-hero .sub-container-hero {
-    height: 55vh;
-    width: 65vw;
-  }
-}
-
-.main-container-hero .sub-container-hero .g1-hero {
+.main-container-hero .sub-container-hero .hero {
   text-align: center;
 }
 
-@media (min-width: 64em) {
-  .main-container-hero .sub-container-hero .g1-hero {
-    text-align: left;
-  }
-}
-
-.main-container-hero .sub-container-hero .g1-hero h1 {
+.main-container-hero .sub-container-hero .hero h1 {
   margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
   font-size: 3.25rem;
   color: white;
 }
 
 @media (min-width: 40em) {
-  .main-container-hero .sub-container-hero .g1-hero h1 {
+  .main-container-hero .sub-container-hero .hero h1 {
     font-size: 3.25rem;
   }
 }
 
 @media (min-width: 87.5em) {
-  .main-container-hero .sub-container-hero .g1-hero h1 {
+  .main-container-hero .sub-container-hero .hero h1 {
     font-size: 4.5rem;
   }
 }
 
-.main-container-hero .sub-container-hero .g1-hero p {
-  font-size: 1.25rem;
-  font-weight: 400;
+.main-container-hero .sub-container-hero .hero p {
+  font-size: 2rem;
+  font-weight: 600;
   color: #dedede;
   margin-top: 0rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media (min-width: 40em) {
-  .main-container-hero .sub-container-hero .g1-hero p {
+  .main-container-hero .sub-container-hero .hero p {
     line-height: 1.25;
     font-size: 2rem;
-    font-weight: 400;
-    margin-right: 15vw;
-    margin-left: 15vw;
+    font-weight: 600;
     padding: 0rem;
   }
 }
 
-@media (min-width: 64em) {
-  .main-container-hero .sub-container-hero .g1-hero p {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-}
-
-.main-container-hero .sub-container-hero .g1-hero #no-igp {
-  margin-top: 2rem;
+.main-container-hero .sub-container-hero .hero #no-igp {
+  margin-top: 2.5rem;
   font-size: 0.875rem;
 }
 
-.main-container-hero .sub-container-hero .g1-hero .dwn-client {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+.main-container-hero .sub-container-hero .hero .dwn-client {
+  margin-top: 0rem;
 }
 
-.main-container-hero .sub-container-hero .g1-hero .dwn-btn {
+.main-container-hero .sub-container-hero .hero .dwn-btn {
   font-size: 0.875rem;
-  padding: 1rem 4rem;
-  border: none;
-  border-radius: 2px;
-  background-color: #0066ba;
-}
-
-.main-container-hero .sub-container-hero .g1-hero .dwn-btn a {
-  color: white;
-}
-
-.main-container-hero .sub-container-hero .g1-hero .material-icons {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main-container-hero .sub-container-hero .g1-hero .pf-icon {
-  margin-left: .5rem;
-  font-size: 16px;
-}
-
-.comm-data-container {
-  margin-bottom: 5rem;
-}
-
-@media (min-width: 40em) {
-  .comm-data-container {
-    margin-bottom: 10rem;
-  }
-}
-
-.comm-data-container .comm-data-wrapper {
-  position: relative;
-  bottom: 2rem;
-  margin-right: 10vw;
-  margin-left: 10vw;
-}
-
-@media (min-width: 40em) {
-  .comm-data-container .comm-data-wrapper {
-    margin-right: 0vw;
-    margin-left: 0vw;
-  }
-}
-
-@media (min-width: 64em) {
-  .comm-data-container .comm-data-wrapper {
-    width: auto;
-    margin-right: 5vw;
-    margin-left: 5vw;
-  }
-}
-
-.comm-data-container .comm-data-wrapper .comm-data {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  color: #ffa35c;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
   padding: 1rem 2rem;
-  border-radius: 2px;
-  -webkit-box-shadow: 0px 5px 15px;
-          box-shadow: 0px 5px 15px;
-}
-
-@media (min-width: 40em) {
-  .comm-data-container .comm-data-wrapper .comm-data {
-    margin-right: 5vw;
-    margin-left: 5vw;
-  }
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 @media (min-width: 64em) {
-  .comm-data-container .comm-data-wrapper .comm-data {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: auto;
-    margin-right: 5vw;
-    margin-left: 5vw;
-  }
-}
-
-.comm-data-container .comm-data-wrapper .comm-data p {
-  text-align: center;
-  font-size: 1.25rem;
-  color: white;
-}
-
-@media (min-width: 64em) {
-  .comm-data-container .comm-data-wrapper .comm-data p {
+  .main-container-hero .sub-container-hero .hero .dwn-btn {
     font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .comm-data-container .comm-data-wrapper .comm-data .comm-info:not(:last-child) {
-    margin-right: 1rem;
-    margin-bottom: auto;
   }
 }
 
@@ -522,79 +437,56 @@ html body .flex-ai-c {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: .25rem;
 }
 
 .section-a-container .section-a-wrapper .section-a {
-  width: 95vw;
-  color: white;
+  width: 100vw;
+  color: #dedede;
+}
+
+.section-a-container .section-a-wrapper .section-a h2 {
+  margin-right: 5vw;
+  margin-left: 5vw;
 }
 
 .section-a-container .section-a-wrapper .section-a a, .section-a-container .section-a-wrapper .section-a a:visited, .section-a-container .section-a-wrapper .section-a a:hover {
   text-decoration: none;
-  color: #0084ff;
+  color: #ffa35c;
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-header {
   text-align: center;
-  margin-bottom: 8rem;
-  padding: 0rem 2rem;
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-header h2 {
-  font-size: 2rem;
-  color: white;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-header h2 {
-    font-size: 3.25rem;
-  }
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-header p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-header p {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-header p {
-    padding-right: 10rem;
-    padding-left: 10rem;
-  }
-}
-
-@media (min-width: 87.5em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-header p {
-    padding-right: 15rem;
-    padding-left: 15rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-header h2, .section-a-container .section-a-wrapper .section-a .game-content-header p {
-    padding: 0rem 4rem;
-  }
+  padding: 4rem 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-header {
-    margin-bottom: 12rem;
+    padding-right: 22.5vw;
+    padding-left: 22.5vw;
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-header::before {
-  content: "";
-  background: url(/images/landing-page/client.png);
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-header {
+    padding: 8rem 20vw;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-header {
+    padding: 8rem 25vw;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-header h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-header h2 {
+    font-size: 3.25rem;
+  }
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content {
@@ -606,124 +498,284 @@ html body .flex-ai-c {
   grid-auto-rows: minmax(50px, auto);
 }
 
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 1rem 5vw;
+  padding-bottom: 7.5vh;
+  margin-top: 7.5vh;
+}
+
 @media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 h3 {
-    padding-right: 0rem;
-    padding-left: 0rem;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1 h3 {
-    margin-right: auto;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
+    padding-top: 7.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 10rem;
+    padding-left: 2.5rem;
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 .instructions-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.25rem;
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h2 {
+  margin-bottom: 0rem;
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 .instructions li {
-  margin-bottom: .75rem;
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 {
+  text-align: center;
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container1, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 {
-  padding: 0vh 5vw 5vh 5vw;
-  background-color: darkblue;
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
+  padding: 2.5rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
+    padding: 7.5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
+    padding: 10rem;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container .material-symbols-outlined {
+  font-size: 75px;
+  font-weight: 200 !important;
+  color: #f0ca8a;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container .material-symbols-outlined {
+    font-size: 100px;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container .material-symbols-outlined:hover {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container h2 {
+  margin: 1rem;
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h2 {
   text-align: center;
   font-size: 2rem;
-  color: white;
-  margin-top: 2rem;
-  margin-bottom: auto;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h2 {
     font-size: 3.25rem;
+    margin-top: 0rem;
   }
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
   text-align: center;
   font-size: 1.25rem;
+  padding: 0rem 5vw;
+  margin-bottom: 0rem;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding-right: 5rem;
-    padding-left: 5rem;
+    padding: 0vh 10vw;
   }
 }
 
 @media (min-width: 64em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding-right: 10rem;
-    padding-left: 10rem;
+    padding: 0vh 22.5vw;
   }
 }
 
 @media (min-width: 87.5em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding-right: 15rem;
-    padding-left: 15rem;
+    padding: 0vh 27.5vw;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container {
+  margin-bottom: 2.5rem;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f0ca8a;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0rem 10vw 0rem 10vw;
+  margin-bottom: 0rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+    padding: 0rem 20vw 2.5rem 20vw;
   }
 }
 
 @media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding: 0rem 4rem;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+    padding: 0rem;
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner p {
-  text-align: left;
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner .w1-image {
-  height: 25rem;
-  background-color: purple;
-}
-
-@media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner h3 {
-    text-align: right;
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+    text-align: left;
+  }
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3 {
+    margin-top: 0rem;
+  }
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+    max-width: 30rem;
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner .w2-image {
-  height: 25rem;
-  background-color: purple;
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-container {
+    padding-left: 10vw;
+  }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-container {
+    padding-left: 10vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-container {
+    padding-right: 10vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list {
+  font-size: 1.25rem;
+  list-style-type: none;
+  text-align: center;
+  padding: 0rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0rem;
 }
 
 @media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner h3 {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 2.5vh 2.5vw;
+    margin: 10vh 15vw;
+  }
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list li, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list li {
+  font-size: 1.25rem;
+}
+
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list li:not(:last-child), .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list li:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list li, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list li {
+    max-width: 2.5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list li, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list li {
     font-size: 2rem;
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner p {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  padding: 0rem;
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w1-image img, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w2-image img {
+  max-width: 100%;
 }
 
 @media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-banner p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-banner p {
-    font-size: 1.25rem;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w1-image img, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w2-image img {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w1-image img, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w2-image img {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w1-image img {
+    -o-object-position: 5rem;
+       object-position: 5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w1-image img {
+    -o-object-position: 10rem;
+       object-position: 10rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w2-image img {
+    -o-object-position: -5rem;
+       object-position: -5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .w2-image img {
+    -o-object-position: -10rem;
+       object-position: -10rem;
   }
 }
 
@@ -941,21 +993,49 @@ footer .site-map p, footer .legal p {
   min-height: 100vh;
 }
 
-.download-main-container h1 {
-  font-size: 3.25rem;
-  text-align: center;
-  color: white;
-}
-
-.download-main-container h2 {
-  margin: 0rem;
-  color: #dedede;
-}
-
 @media (min-width: 64em) {
   .download-main-container {
     padding: 6rem 0rem;
   }
+}
+
+.download-main-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  margin-right: 15vw;
+  margin-left: 15vw;
+}
+
+@media (min-width: 40em) {
+  .download-main-container h1 {
+    font-size: 3.25rem;
+    margin-bottom: 5rem;
+    margin-right: 25vw;
+    margin-left: 25vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .download-main-container h1 {
+    margin-right: 35vw;
+    margin-left: 35vw;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .download-main-container h1 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-right: 40vw;
+    margin-left: 40vw;
+  }
+}
+
+.download-main-container h2 {
+  font-size: 1.25rem;
+  margin: 0rem;
+  color: white;
 }
 
 .download-sub-container {
@@ -963,17 +1043,43 @@ footer .site-map p, footer .legal p {
   margin-top: 3rem;
 }
 
+@media (min-width: 64em) {
+  .download-sub-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .download-sub-container .download-client1, .download-sub-container .download-client2 {
+    margin-right: 2.5rem;
+  }
+  .download-sub-container .download-client3 {
+    margin-right: 0rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .download-sub-container .download-client1, .download-sub-container .download-client2 {
+    margin-right: 5rem;
+  }
+  .download-sub-container .download-client3 {
+    margin-right: 0rem;
+  }
+}
+
 .download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
   text-align: center;
-  background-color: #24282e;
-  width: 32rem;
-  height: 20rem;
-  border: none;
+  width: 10rem;
+  height: 5rem;
+  -webkit-box-shadow: 0px 0px 30px black;
+          box-shadow: 0px 0px 30px black;
+  background-color: #10181c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  -webkit-box-shadow: 0px 0px 50px black;
-          box-shadow: 0px 0px 50px black;
   font-size: 1.25rem;
 }
 
@@ -981,51 +1087,10 @@ footer .site-map p, footer .legal p {
   color: white;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 87.5em) {
   .download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
-    text-align: center;
-    background-color: #24282e;
-    border: none;
-    border-radius: 5px;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    -webkit-box-shadow: 0px 0px 50px black;
-            box-shadow: 0px 0px 50px black;
-  }
-  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a, .download-sub-container .download-client3 a {
-    color: white;
-  }
-}
-
-@media (min-width: 64em) {
-  .download-sub-container .download-client1, .download-sub-container .download-client2, .download-sub-container .download-client3 {
-    text-align: center;
-    background-color: #24282e;
-    width: 32rem;
-    height: 10rem;
-    border: none;
-    border-radius: 5px;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    -webkit-box-shadow: 0px 0px 50px black;
-            box-shadow: 0px 0px 50px black;
-  }
-  .download-sub-container .download-client1 a, .download-sub-container .download-client2 a, .download-sub-container .download-client3 a {
-    color: white;
-  }
-}
-
-.usr-agree {
-  text-align: center;
-  font-size: 0.75rem;
-  color: #dedede;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 64em) {
-  .usr-agree {
-    position: relative;
-    top: 2rem;
+    width: 15rem;
+    height: 14rem;
   }
 }
 
@@ -1531,17 +1596,43 @@ footer .site-map p, footer .legal p {
   }
 }
 
+.main-container-highscores {
+  background-color: #131d22;
+}
+
 .main-container-highscores .sub-container-highscores {
   color: #dedede;
 }
 
 .main-container-highscores .sub-container-highscores h1 {
   font-size: 2rem;
-  margin-top: 0rem;
+  margin: 0rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores h1 {
+    font-size: 3.25rem;
+  }
 }
 
 .main-container-highscores .sub-container-highscores h2 {
   margin-top: 0rem;
+}
+
+.main-container-highscores .sub-container-highscores h3 {
+  margin-top: 0rem;
+}
+
+.main-container-highscores .sub-container-highscores .header-highscores {
+  text-align: center;
+  padding: 5rem 2.5rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores .sub-container-highscores .header-highscores {
+    padding: 7.5rem 2.5rem;
+  }
 }
 
 .main-container-highscores .sub-container-highscores a:hover {
@@ -1555,6 +1646,7 @@ footer .site-map p, footer .legal p {
 .main-container-highscores .sub-container-highscores #hs-overall {
   font-size: 2rem;
   text-align: center;
+  color: #f0ca8a;
 }
 
 @media (min-width: 64em) {
@@ -1570,13 +1662,10 @@ footer .site-map p, footer .legal p {
   }
 }
 
-.main-container-highscores .sub-container-highscores .header-highscores {
-  text-align: center;
-}
-
 .main-container-highscores .sub-container-highscores .sub-header-hs {
-  padding: 0rem 1rem;
-  margin-bottom: 2rem;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 64em) {
@@ -1597,6 +1686,9 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-highscores .sub-container-highscores .filter-skill-hs, .main-container-highscores .sub-container-highscores .filter-account-hs, .main-container-highscores .sub-container-highscores .filter-time-hs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 0.875rem;
   background-color: white;
   height: 2.75rem;
@@ -1604,14 +1696,15 @@ footer .site-map p, footer .legal p {
   cursor: pointer;
 }
 
-.main-container-highscores .sub-container-highscores .filter-skill-hs:not(:last-child), .main-container-highscores .sub-container-highscores .filter-account-hs:not(:last-child), .main-container-highscores .sub-container-highscores .filter-time-hs:not(:last-child) {
-  margin-right: .25rem;
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores .filter-skill-hs:not(:last-child), .main-container-highscores .sub-container-highscores .filter-account-hs:not(:last-child), .main-container-highscores .sub-container-highscores .filter-time-hs:not(:last-child) {
+    margin-right: .5rem;
+  }
 }
 
 @media (min-width: 64em) {
   .main-container-highscores .sub-container-highscores .filter-skill-hs, .main-container-highscores .sub-container-highscores .filter-account-hs, .main-container-highscores .sub-container-highscores .filter-time-hs {
-    position: relative;
-    left: 3rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -1622,14 +1715,45 @@ footer .site-map p, footer .legal p {
   background-color: transparent;
   border: none;
   border-radius: 2px;
-  padding: 0rem 1rem;
-  margin: 0;
+  padding: 0rem 1.85rem;
+  margin-bottom: 1rem;
   width: 100%;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
   outline: none;
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores select {
+    padding: 0rem 2rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .main-container-highscores .sub-container-highscores .select-hs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.main-container-highscores .sub-container-highscores .select-hs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores .sub-container-highscores .filter-container {
+    position: relative;
+    left: 2rem;
+  }
 }
 
 .main-container-highscores .sub-container-highscores .filter-option-container {
@@ -1642,10 +1766,9 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-highscores .sub-container-highscores #search-user-hs {
-  width: 30.4rem;
   font-size: 0.875rem;
-  margin-top: .25rem;
   padding: .75rem;
+  width: 10rem;
   border: none;
   border-radius: 2px;
   outline: none;
@@ -1654,59 +1777,89 @@ footer .site-map p, footer .legal p {
 @media (min-width: 64em) {
   .main-container-highscores .sub-container-highscores #search-user-hs {
     margin-top: auto;
-    width: auto;
   }
 }
 
-.main-container-highscores .sub-container-highscores table {
+.main-container-highscores .sub-container-highscores .hs-table table {
+  -webkit-box-shadow: 5px 0px 30px black;
+          box-shadow: 5px 0px 30px black;
   text-align: right;
   border-spacing: 1px;
 }
 
 @media (min-width: 40em) {
-  .main-container-highscores .sub-container-highscores table {
-    width: 95vw;
+  .main-container-highscores .sub-container-highscores .hs-table table {
+    width: 85vw;
   }
 }
 
-.main-container-highscores .sub-container-highscores table th {
+.main-container-highscores .sub-container-highscores .hs-table table th {
   height: 3rem;
   padding: .75rem;
-  background-color: #2c2c2c;
+  background-color: #0d181c;
+  color: #f0ca8a;
 }
 
-.main-container-highscores .sub-container-highscores table td {
+.main-container-highscores .sub-container-highscores .hs-table table td {
   height: 3rem;
   text-align: right;
   padding: .5rem;
-  background-color: #464646;
+  background-color: #1f2b31;
 }
 
-.main-container-highscores .sub-container-highscores table #rank {
+.main-container-highscores .sub-container-highscores .hs-table table td p {
+  margin: 0rem;
+}
+
+.main-container-highscores .sub-container-highscores .hs-table table #rank {
   width: 5rem;
 }
 
-.main-container-highscores .sub-container-highscores table #player, .main-container-highscores .sub-container-highscores table #level, .main-container-highscores .sub-container-highscores table #exp {
+.main-container-highscores .sub-container-highscores .hs-table table #player, .main-container-highscores .sub-container-highscores .hs-table table #level, .main-container-highscores .sub-container-highscores .hs-table table #exp {
   width: 10rem;
 }
 
-.main-container-highscores .sub-container-highscores table #player {
+.main-container-highscores .sub-container-highscores .hs-table table #player {
   text-align: left;
   padding-left: 1rem;
 }
 
 @media (min-width: 40em) {
-  .main-container-highscores .sub-container-highscores table #player {
+  .main-container-highscores .sub-container-highscores .hs-table table #player {
     padding-left: 2rem;
   }
 }
 
-.main-container-highscores .sub-container-highscores table .player-hs {
+.main-container-highscores .sub-container-highscores .hs-table table #player-rank {
+  margin-right: 1rem;
+  cursor: default;
+}
+
+.main-container-highscores .sub-container-highscores .hs-table table #player-data-ttl, .main-container-highscores .sub-container-highscores .hs-table table #player-data-exp {
+  cursor: default;
+}
+
+.main-container-highscores .sub-container-highscores .hs-table table .player-hs {
   text-align: right;
 }
 
 .main-container-highscores .sub-container-highscores .pagination-container {
-  margin-top: 1rem;
+  padding: 1rem 0rem;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container a {
+  background-color: none;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  padding: .5rem .75rem;
+}
+
+.main-container-highscores .sub-container-highscores .pagination-container a:hover {
+  background-color: rgba(60, 60, 60, 0.198);
+  border-radius: 2px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 .main-container-highscores .sub-container-highscores .pagination-container ul {
@@ -1728,23 +1881,9 @@ footer .site-map p, footer .legal p {
   transition: opacity 200ms ease-in-out;
 }
 
-.main-container-highscores .sub-container-highscores .pagination-container a {
-  background-color: none;
-  border: solid 1px;
-  border-color: grey;
-  border-radius: 2px;
-  padding: .5rem .75rem;
-}
-
-.main-container-highscores .sub-container-highscores .pagination-container a:hover {
-  background-color: #797979;
-  border-radius: 2px;
-  -webkit-transition: background-color 200ms ease-in-out;
-  transition: background-color 200ms ease-in-out;
-}
-
 .main-container-highscores .sub-container-highscores .pagination-container .active {
-  background-color: #3f3f3f;
+  background-color: rgba(19, 19, 19, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main-container-highscores .sub-container-highscores .pagination-container .page-dots {
@@ -1777,6 +1916,7 @@ footer .site-map p, footer .legal p {
 .main-container-highscores-player .sub-container-highscores-player #hs-overall {
   font-size: 2rem;
   text-align: center;
+  color: #f0ca8a;
 }
 
 @media (min-width: 64em) {
@@ -1794,6 +1934,7 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores-player .sub-container-highscores-player .header-highscores-player {
   text-align: center;
+  padding: 7.5rem 2.5rem;
 }
 
 .main-container-highscores-player .sub-container-highscores-player .header-highscores-player #player-rank::before {
@@ -1885,27 +2026,32 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-highscores-player .sub-container-highscores-player table {
+  -webkit-box-shadow: 5px 0px 30px black;
+          box-shadow: 5px 0px 30px black;
   text-align: right;
   border-spacing: 1px;
-}
-
-@media (min-width: 40em) {
-  .main-container-highscores-player .sub-container-highscores-player table {
-    width: 95vw;
-  }
+  width: 85vw;
+  margin-bottom: 2rem;
 }
 
 .main-container-highscores-player .sub-container-highscores-player table th {
   height: 3rem;
   padding: .75rem;
-  background-color: #2c2c2c;
+  background-color: #0d181c;
+  color: #f0ca8a;
+  cursor: default;
 }
 
 .main-container-highscores-player .sub-container-highscores-player table td {
   height: 3rem;
   text-align: right;
   padding: .5rem;
-  background-color: #464646;
+  background-color: #1f2b31;
+  cursor: default;
+}
+
+.main-container-highscores-player .sub-container-highscores-player table td #player-skill-rank {
+  margin-right: 1rem;
 }
 
 .main-container-highscores-player .sub-container-highscores-player table td img {
@@ -1936,19 +2082,21 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-wmap .sub-container-wmap {
-  background-color: #418686;
+  background-color: #131c21;
   color: #dedede;
 }
 
-.main-container-wmap .sub-container-wmap .header-wmap {
+.main-container-wmap .sub-container-wmap h1 {
   text-align: center;
-  padding: 3rem;
-  margin-bottom: 1rem;
-  background-color: #314e4e;
+  padding: 5rem 5vw;
+  margin: 0rem;
 }
 
-.main-container-wmap .sub-container-wmap .header-wmap h1 {
-  margin: 0rem;
+@media (min-width: 40em) {
+  .main-container-wmap .sub-container-wmap h1 {
+    font-size: 3.25rem;
+    padding: 7.5rem 2.5rem;
+  }
 }
 
 .main-container-wmap .sub-container-wmap .canvas-wmap-container {
@@ -1961,10 +2109,9 @@ footer .site-map p, footer .legal p {
 }
 
 .main-container-wmap .sub-container-wmap .canvas-wmap-container .canvas-wmap {
-  height: 30rem;
-  width: 95vw;
-  margin-bottom: 1rem;
-  background-color: #182525;
+  height: 100%;
+  width: 100vw;
+  background-color: green;
 }
 
 @media (min-width: 64em) {

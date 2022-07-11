@@ -1,21 +1,37 @@
-<nav class="main-nav flex flex-ai-c flex-jc-sb">
-    <div class="top-logo flex flex-ai-c">
-        <a href="/">Darkan</a>
-    </div>
-    <div class="hamburger hide-for-desktop">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <div class="flex flex-ai-c hide-for-mobile">
-        <a href="/highscores">Highscores</a>
-    </div>
+<nav class="nav-wrapper">
+        <div class="nav-container">
+            <div class="top-logo flex flex-ai-c">
+                <a href="/">Darkan</a>
+            </div>
+            <div class="nav-links flex flex-ai-c">
+                <div class="dropdown">
+                    <p class="dropbtn flex flex-ai-c">Explore<i class="fas fa-caret-down dwn-arrow"></i></p>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-links">
+                                <li><a href="#">Discord</a></li>
+                                <li><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Github</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <a href="/highscores">Highscores</a>
+                <div class="dropdown">
+                <p class="dropbtn flex flex-ai-c">Tools<i class="fas fa-caret-down dwn-arrow"></i></p>
+                    <div class="dropdown-content">
+                        <ul class="dropdown-links">
+                            <li><a href="/world-map">World Map</a></li>
+                            <li><a href="/api">API Documents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
+            </div>
+        </div>
 </nav>
 <div class="main-container-highscores-player">
     <div class="sub-container-highscores-player">
         <div class="header-highscores-player header-image">
-            <h1><span id="player-id">Oflegend</span></h1>
-            <div><h2><span id="player-rank">11</span></h2></div>
+            <h1><span id="player-id">Username</span></h1>
+            <div><h2><span id="player-rank">1</span></h2></div>
         </div>
         <div class="sub-header-hs">
             <h2 id="hs-overall">Overall Stats</h2>
@@ -33,219 +49,212 @@
                 </thead>
                 <tbody>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/attack.png">Attack</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/strength.png">Strength</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/defense.png">Defense</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/ranged.png">Ranged</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/magic.png">Magic</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/prayer.png">Prayer</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/summoning.png">Summoning</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/runecrafting.png">Runecrafting</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/construction.png">Construction</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/dungeoneering.png">Dungeoneering</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/agility.png">Agility</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/herblore.png">Herblore</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/theiving.png">Theiving</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/crafting.png">Crafting</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/fletching.png">Fletching</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/slayer.png">Slayer</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/hunter.png">Hunter</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/mining.png">Mining</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/smithing.png">Smithing</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/fishing.png">Fishing</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/cooking.png">Cooking</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/firemaking.png">Firemaking</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/woodcutting.png">Woodcutting</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                     <tr class="row-hover1">
-                        <td>1</a></td>
+                        <td><span id="player-skill-rank">1</span></td>
                         <td id="player">
                             <div class="flex flex-ai-c"><img src="images/skill_icons/farming.png">Farming</div>
                         </td>
-                        <td>99</td>
-                        <td>13,034,431</td>
+                        <td id="skill-level">99</td>
+                        <td id="total-exp">13,034,431</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-<footer class="flex flex-jc-sb flex-ai-c">
-    <div class="site-map flex flex-ai-c flex-jc-c">
-        <a href="#" class="hide-for-desktop">Site Map</a>
-        <div class="hide-for-mobile">
-            <a href="/">Home</a>
-            <a href="/highscores">Highscores</a>
+<footer>
+    <div class="site-map">
+        <div class="f-link-container">
+            <div class="f-link"><a href="/">Darkan</a></div>
+            <div class="f-link"><a href="/download">Download</a></div>
+            <div class="f-link"><a href="/highscores">Highscores</a></div>
+            <div class="f-link"><a href="/#">Discord</a></div>
+            <div class="f-link"><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Developers</a></div>
+            <div class="f-link"><p>No in-game purchases</p></div>
+            <div class="f-link"><p>Darkan @ 2022</p></div>
         </div>        
-    </div>
-    <div></div>
-        <a href="/">Darkan</a>
-    </div>
-    <div class="legal flex flex-ai-c flex-jc-c">
-        <p>No in-game purchases</p>
-        <p>Darkan @ 2022</p>
-        <div>
-            <a href="/terms">Terms</a>
-            <a href="/privacy-policy">Privacy</a>
-        </div>
     </div>
 </footer>

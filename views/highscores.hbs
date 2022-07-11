@@ -1,77 +1,93 @@
-<nav class="main-nav flex flex-ai-c flex-jc-sb">
-    <div class="top-logo flex flex-ai-c">
-        <a href="/">Darkan</a>
-    </div>
-    <div class="hamburger hide-for-desktop">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-    <div class="flex flex-ai-c hide-for-mobile">
-        <a href="/highscores">Highscores</a>
-    </div>
+<nav class="nav-wrapper">
+        <div class="nav-container">
+            <div class="top-logo flex flex-ai-c">
+                <a href="/">Darkan</a>
+            </div>
+            <div class="nav-links flex flex-ai-c">
+                <div class="dropdown">
+                    <p class="dropbtn flex flex-ai-c">Explore<i class="fas fa-caret-down dwn-arrow"></i></p>
+                        <div class="dropdown-content">
+                            <ul class="dropdown-links">
+                                <li><a href="#">Discord</a></li>
+                                <li><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Github</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <a href="/highscores">Highscores</a>
+                <div class="dropdown">
+                <p class="dropbtn flex flex-ai-c">Tools<i class="fas fa-caret-down dwn-arrow"></i></p>
+                    <div class="dropdown-content">
+                        <ul class="dropdown-links">
+                            <li><a href="/world-map">World Map</a></li>
+                            <li><a href="/api">API Documents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/assets/uploads/files/Darkan.exe" class="cta-dwnl">Download</a>
+            </div>
+        </div>
 </nav>
 <div class="main-container-highscores">
     <div class="sub-container-highscores">
-        <div class="header-highscores header-image">
+        <div class="header-highscores">
             <h1>Highscores</h1>
             <h2>Track, Compare, Achieve Rank #1</h2>
         </div>
         <div class="sub-header-hs">
-            <h2 id="hs-overall">Overall</h2>
-            <div class="flex flex-jc-c">
-                <div class="select-hs flex">
-                    <select class="filter-time-hs">
-                        <optgroup label="Time period"></optgroup>
-                        <option>All time</option>
-                        <option>Monthly</option>
-                        <option>Weekly</option>
-                        <option>Daily</option>
-                    </select>
-                    <select class="filter-account-hs">
-                        <optgroup label="Account type"></optgroup>
-                        <option>All</option>
-                        <option>Regular</option>
-                        <option>Ironman</option>
-                        <option>Hardcore Ironman</option>
-                        <option>Ultimate Ironman</option>
-                    </select>
-                    <select class="filter-skill-hs">
-                        <optgroup label="Skill"></optgroup>
-                        <option>All</option>
-                        <option>Attack</option>
-                        <option>Strength</option>
-                        <option>Defense</option>
-                        <option>Ranged</option>
-                        <option>Magic</option>
-                        <option>Hitpoints</option>
-                        <option>Prayer</option>
-                        <option>Summoning</option>
-                        <option>Runecrafting</option>
-                        <option>Construction</option>
-                        <option>Dungeoneering</option>
-                        <option>Agility</option>
-                        <option>Herblore</option>
-                        <option>Theiving</option>
-                        <option>Crafting</option>
-                        <option>Fletching</option>
-                        <option>Slayer</option>
-                        <option>Hunter</option>
-                        <option>Mining</option>
-                        <option>Smithing</option>
-                        <option>Fishing</option>
-                        <option>Cooking</option>
-                        <option>Firemaking</option>
-                        <option>Woodcutting</option>
-                        <option>Farming</option>
-                    </select>
+            <h3 class="hide-for-mobile" id="hs-overall">Overall</h3>
+            <div class="filter-container">
+                <div class="select-hs-container">
+                    <div class="select-hs">
+                        <select class="filter-time-hs">
+                            <optgroup label="Time period"></optgroup>
+                            <option>All time</option>
+                            <option>Monthly</option>
+                            <option>Weekly</option>
+                            <option>Daily</option>
+                        </select>
+                        <select class="filter-account-hs">
+                            <optgroup label="Account type"></optgroup>
+                            <option>All accounts</option>
+                            <option>Regular</option>
+                            <option>Ironman</option>
+                        </select>
+                        <select class="filter-skill-hs">
+                            <optgroup label="Skill"></optgroup>
+                            <option>All skills</option>
+                            <option>Attack</option>
+                            <option>Strength</option>
+                            <option>Defense</option>
+                            <option>Ranged</option>
+                            <option>Magic</option>
+                            <option>Hitpoints</option>
+                            <option>Prayer</option>
+                            <option>Summoning</option>
+                            <option>Runecrafting</option>
+                            <option>Construction</option>
+                            <option>Dungeoneering</option>
+                            <option>Agility</option>
+                            <option>Herblore</option>
+                            <option>Theiving</option>
+                            <option>Crafting</option>
+                            <option>Fletching</option>
+                            <option>Slayer</option>
+                            <option>Hunter</option>
+                            <option>Mining</option>
+                            <option>Smithing</option>
+                            <option>Fishing</option>
+                            <option>Cooking</option>
+                            <option>Firemaking</option>
+                            <option>Woodcutting</option>
+                            <option>Farming</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-jc-c">
                 <input id="search-user-hs" type="text" name="Username" placeholder="Search Username" value="">
             </div>
         </div>
-        <div class="flex flex-jc-c">
+        <div class="hs-table flex flex-jc-c">
             <table>
                 <thead>
                     <th id="rank">Rank</th>
@@ -81,42 +97,41 @@
                 </thead>
                 <tbody>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
+                        <td><span id="player-rank">1</span></td>
                         <td id="player"><a href="/highscores-player">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
-                        <td id="player"><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><span id="player-rank">1</span></td>
+                        <td id="player"><a href="/highscores-player">Username</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
-                        <td id="player"><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><span id="player-rank">1</span></td>
+                        <td id="player"><a href="/highscores-player">Username</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
-                        <td id="player"><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><span id="player-rank">1</span></td>
+                        <td id="player"><a href="/highscores-player">Username</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
-                        <td id="player"><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><span id="player-rank">1</span></td>
+                        <td id="player"><a href="/highscores-player">Username</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
                     <tr class="row-hover1">
-                        <td><a href="#">1</a></td>
-                        <td id="player"><a href="#">Username</td>
-                        <td><a href="#">2,600</td>
-                        <td><a href="#">5,600,000</td>
+                        <td><span id="player-rank">1</span></td>
+                        <td id="player"><a href="/highscores-player">Username</td>
+                        <td><p id="player-data-ttl">2,600</p></td>
+                        <td><p id="player-data-exp">5,600,000</p></td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
@@ -135,23 +150,16 @@
         </div>
     </div>
 </div>
-<footer class="flex flex-jc-sb flex-ai-c">
-    <div class="site-map flex flex-ai-c flex-jc-c">
-        <a href="#" class="hide-for-desktop">Site Map</a>
-        <div class="hide-for-mobile">
-            <a href="/">Home</a>
-            <a href="/highscores">Highscores</a>
+<footer>
+    <div class="site-map">
+        <div class="f-link-container">
+            <div class="f-link"><a href="/">Darkan</a></div>
+            <div class="f-link"><a href="/download">Download</a></div>
+            <div class="f-link"><a href="/highscores">Highscores</a></div>
+            <div class="f-link"><a href="/#">Discord</a></div>
+            <div class="f-link"><a href="https://github.com/orgs/DarkanRS/repositories" target="_blank" rel="noopener noreferrer" class="cta-developers">Developers</a></div>
+            <div class="f-link"><p>No in-game purchases</p></div>
+            <div class="f-link"><p>Darkan @ 2022</p></div>
         </div>        
-    </div>
-    <div></div>
-        <a href="/">Darkan</a>
-    </div>
-    <div class="legal flex flex-ai-c flex-jc-c">
-        <p>No in-game purchases</p>
-        <p>Darkan @ 2022</p>
-        <div>
-            <a href="/terms">Terms</a>
-            <a href="/privacy-policy">Privacy</a>
-        </div>
     </div>
 </footer>

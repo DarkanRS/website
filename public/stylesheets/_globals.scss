@@ -9,42 +9,34 @@ html {
     }
 
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Aeonik, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.5;
         font-size: $font-sm;
+        font-weight: 600;
         padding: 0rem;
         margin: 0rem;
-        background-color: rgb(22, 22, 22);
-        color: black;
-        cursor: auto;
+        background: rgb(13,24,28);
+        background: linear-gradient(0deg, rgba(13,24,28,1) 0%, rgb(33, 57, 68) 51%, rgba(13,24,28,1) 100%);
+        color: rgb(222, 222, 222);
+        cursor: default;
 
         // top nav
 
-            // - hamburger menu - (mobile)
-            .hamburger {
-                padding-right: 0rem;
-                cursor: pointer;
-            }
-            .bar {
-                display: block;
-                width: 1.5rem;
-                height: .125rem;
-                margin: .25rem auto;
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                background-color: rgb(255, 255, 255);
-            }
-            
             // nav - padding
             nav {
-                padding: 2rem 2rem;
-
-                @include breakpoint-up(large) {
-                    padding: 1.5rem 8rem;
+                padding: 1rem;
+                @include breakpoint-up (medium) {
+                    padding: 1rem 2rem;
+                }
+                @include breakpoint-up (large) {
+                    padding: 1rem 2rem;
+                }
+                @include breakpoint-up (xlarge) {
+                    padding: 1rem 4rem;
                 }
             }
             // nav - formatting
-            .main-nav {
+            .nav-wrapper {
                 .top-logo a {
                     font-size: $font-med;
                 }
@@ -52,7 +44,6 @@ html {
                     position: relative;
                     font-size: $font-sm;
                     margin-right: 2rem;
-                    color: rgb(222, 222, 222);
 
                     &:hover {
                         color: rgb(255, 255, 255);
@@ -67,19 +58,37 @@ html {
                     color: rgb(222, 222, 222);
                 }
                 #player-count {
-                    margin-right: .25rem;
+                    margin-right: .5rem;
                 }
-
                 ul {
                     margin: 0rem;
                     padding: 0rem;
                 }
-
                 li {
                     list-style-type: none;
                 }
+
+                @include breakpoint-down (x-small) {
+                    display: none;
+                }
             }
-            // - dropdown menu
+            .nav-container {
+                display: flex;
+                justify-content: center;
+                p, a {
+                    font-size: $font-sm;
+                }
+                @include breakpoint-up (medium) {
+                    justify-content: space-between;
+                }
+            }
+            .nav-links {
+                margin-left: 2rem;
+                @include breakpoint-up (medium) {
+                    margin-left: 4rem;
+                }
+            }
+            // dropdown - menu
             .dropbtn {
                 font-size: $font-sm;
                 margin: 0rem;
@@ -94,7 +103,6 @@ html {
             .dropdown {
                 position: relative;
                 display: inline-block;
-
                 p {
                     padding: 1rem 2rem 1rem 0rem;
                 }
@@ -102,8 +110,9 @@ html {
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: rgb(32, 32, 32);
-                min-width: 15rem;
+                background-color: rgba(255, 255, 255, 0.116);
+                border: 1px solid rgba(255,255,255,0.1);
+                min-width: 11rem;
                 border-radius: 2.5px;
                 top: 3.25rem;
                 left: -1rem;
@@ -116,7 +125,6 @@ html {
                 font-size: $font-sm;
                 text-align: left;
                 padding: .75rem;
-                text-decoration: none;
                 display: block;
             }
             .dropdown-content p {
@@ -126,10 +134,9 @@ html {
                 padding: .25rem;
                 text-decoration: none;
                 display: block;
-                color: rgb(145, 145, 145);
             } 
             .dropdown-content a:hover {
-                background-color: rgba(124, 124, 124, 0.25);
+                background-color: rgb(33, 43, 48);
                 border-radius: 2.5px;
                 transition: background-color 200ms ease-in-out
             }
@@ -137,65 +144,62 @@ html {
                 display: block;
             }
             .dwn-arrow {
-                margin-left: .25rem;
+                margin-left: .375rem;
+                margin-top: .20rem;
             }
 
         // footer
 
             footer {
-                display: flex;
-                flex-wrap: wrap;
-                background-color: rgb(22, 22, 22);
-                font-size: $font-xsm;
+                font-size: $font-sm;
+                background-color: rgb(20, 20, 20);
+                padding: 5vh 10vw;
                 color: rgb(222, 222, 222);
-                padding: 1rem;
-
-                p {
-                    margin: 0rem;
+                @include breakpoint-up (large) {
+                    font-size: $font-sm;
+                    padding: 2.5vh 5vw;
                 }
-
                 a {
-                    color: rgb(222, 222, 222);
                     &:hover {
                         color: white;
                     }
                 }
-
-                .site-map, .legal {
-                    a:not(:last-child) {
-                        margin-right: 1rem;
+                .site-map {
+                    @include breakpoint-up (medium) {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
                     }
-                    p {
-                        margin-right: 1rem;
+                    a, p {
+                        margin-right: 0rem;
+                        @include breakpoint-up (large) {
+                            margin-right: 2.5rem;
+                        }
+                    }
+                    .f-link:not(:last-child) {
+                        margin-bottom: .5rem;
+                        @include breakpoint-up (large) {
+                            margin-bottom: 0rem;
+                        }
+                    }
+                    .f-link-container {
+                        @include breakpoint-up (large) {
+                            display: flex;
+                            justify-content: space-around;
+                        }
                     }
                 }
-
-                @include breakpoint-up(large) {
-                    height: auto;
+                .f-link {
+                    padding: .25rem;
                 }
             }
 
         // global design
 
-            // header section
-            .header-image {
-                padding: 6rem 0rem;
-
-                @include breakpoint-up (large) {
-                    padding: 10rem 0rem;
-                }
-            }
-            .header-image-med {
-                padding: 3rem 1rem 6rem 1rem;
-
-                @include breakpoint-up (large) {
-                    padding: 5rem 0rem;
-                }
-            }
             // link - design
             a, a:visited, a:hover {
                 text-decoration: none;
-                color: rgb(255, 255, 255);
+                color: rgb(222, 222, 222);
             }
             // button & row - hover state
             .button-hover, .row-hover {
@@ -224,6 +228,9 @@ html {
             .calc_data_unavailable {
                 color: lightsalmon;
             }
+        
+        // utility
+
             // content - alignment
             .flex {
                 display: flex;
