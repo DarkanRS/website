@@ -7,7 +7,6 @@ html {
     *, *::before, *::after {
         box-sizing: inherit;
     }
-
     body {
         font-family: Aeonik, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.5;
@@ -16,7 +15,7 @@ html {
         padding: 0rem;
         margin: 0rem;
         background: rgb(13,24,28);
-        background: linear-gradient(0deg, rgba(13,24,28,1) 0%, rgb(33, 57, 68) 51%, rgba(13,24,28,1) 100%);
+        background: linear-gradient(0deg, rgba(13,13,13,1) 0%, rgb(21, 31, 36) 51%, rgba(13,13,13,1) 100%);
         color: rgb(222, 222, 222);
         cursor: default;
 
@@ -136,7 +135,7 @@ html {
                 display: block;
             } 
             .dropdown-content a:hover {
-                background-color: rgb(33, 43, 48);
+                background-color: rgb(20, 33, 41);
                 border-radius: 2.5px;
                 transition: background-color 200ms ease-in-out
             }
@@ -152,7 +151,7 @@ html {
 
             footer {
                 font-size: $font-sm;
-                background-color: rgb(20, 20, 20);
+                background-color: rgb(13, 13, 13);
                 padding: 5vh 10vw;
                 color: rgb(222, 222, 222);
                 @include breakpoint-up (large) {

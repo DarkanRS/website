@@ -4,7 +4,6 @@
 .main-container-hero {
     padding-top: 20vh;
     .hero-img {
-        display: inline;
         position: absolute;
         top: 0px;
         bottom: 0px;
@@ -12,6 +11,8 @@
         z-index: -1;
         opacity: .1;
         height: 100%;
+        width: 100%;
+        object-fit: cover;
         @include breakpoint-up (large) {
             width: 100%;
             object-fit: cover;
@@ -99,10 +100,10 @@
                     padding-left: 22.5vw;
                 }
                 @include breakpoint-up (large) {
-                    padding: 8rem 20vw;
+                    padding: 10rem 20vw 8rem 20vw;
                 }
                 @include breakpoint-up (xlarge) {
-                    padding: 8rem 25vw;
+                    padding: 10rem 27.5vw 10rem 27.5vw;
                 }
                 h2 {
                     font-size: $font-xmed;
@@ -114,11 +115,6 @@
             .game-content-container {
                 .game-content-wrapper {
                     .game-content {
-                        display: grid;
-                        grid-template-columns: repeat(1, 1fr);
-                        row-gap: .25rem;
-                        grid-auto-rows: minmax(50px, auto);
-
                         // containers (individual)
                         .content-container1 {
 
@@ -127,7 +123,6 @@
                             background-color: rgba(255, 255, 255, 0.06);
                             padding: 1rem 5vw;
                             padding-bottom: 7.5vh;
-                            margin-top: 7.5vh;
                             @include breakpoint-up (medium) {
                                 padding-top: 2.5rem;
                                 padding-bottom: 4rem;
@@ -174,15 +169,16 @@
                                 }
                             }
                         }
-                        
                         // containers (grouped)
                         .content-container2, .content-container3 {
                              h2 {
                                 text-align: center;
                                 font-size: $font-xmed;
                                 @include breakpoint-up (medium) {
-                                    font-size: $font-lg;
                                     margin-top: 0rem;
+                                }
+                                @include breakpoint-up (large) {
+                                    font-size: $font-lg;
                                 }
                             }
                             p {
@@ -201,14 +197,17 @@
                                 }
                             }
                         }
-
                         // world-container
                         .world-container {
-                            margin-bottom: 2.5rem;
+                            position: relative;
+                            z-index: 5;
                             h3 {
                                 text-align: center;
                                 font-size: $font-xmed;
                                 color: rgb(240, 202, 138);
+                                @include breakpoint-up (medium) {
+                                    margin-top: 0rem;
+                                }
                             }
                             p {
                                 text-align: center;
@@ -216,7 +215,7 @@
                                 padding: 0rem 10vw 0rem 10vw;
                                 margin-bottom: 0rem;
                                 @include breakpoint-up (medium) {
-                                    padding: 0rem 20vw 2.5rem 20vw;
+                                    padding: 0rem 20vw 0rem 20vw;
                                 }
                                 @include breakpoint-up (large) {
                                     padding: 0rem;
@@ -230,50 +229,89 @@
                                     margin-top: 0rem;
                                 }
                                 p {
-                                    max-width: 30rem;
+                                    max-width: 20rem;
                                 }
                             }
                         }
-                        .world1-container {
+                        // world-headers (grouped)
+                        .world1-header, .world2-header {
                             @include breakpoint-up (large) {
-                                padding-left: 10vw;
+                                position: relative;
+                                top: 30rem;
+                                margin-right: 20vw;
+                                margin-left: 5rem;
+                                h3 {
+                                    font-size: $font-lg;
+                                    margin-bottom: 0rem;
+                                }
                             }
                             @include breakpoint-up (xlarge) {
-                                padding-left: 10vw;
+                                top: 50vh;
+                                margin-left: 10rem;
                             }
                         }
-                        .world2-container {
-                            @include breakpoint-up (large) {
-                                padding-right: 10vw;
+                        // world - text - container
+                        .world1-text-container {
+                            display: grid;
+                            grid-template-columns: repeat(1, 2fr);
+                            position: absolute;
+                            top: 105rem;
+                            left: 5vw;
+                            width: 20rem;
+                            h3 {
+                                font-size: $font-lg;
+                                color: rgb(240, 202, 138);
+                                margin-bottom: 0rem;
+                            }
+                            @include breakpoint-up (xlarge) {
+                               top: 115rem;
                             }
                         }
-
-                        // world-banners (grouped)
-                        .world1-banner, .world2-banner {
-                            @include breakpoint-up (large) {
-                                display: flex;
-                                justify-content: space-around;
-                                align-items: center;
+                        .world2-text-container {
+                            display: grid;
+                            grid-template-columns: repeat(1, 2fr);
+                            position: absolute;
+                            top: 168.5rem;
+                            left: 5vw;
+                            width: 20rem;
+                            h3 {
+                                font-size: $font-lg;
+                                color: rgb(240, 202, 138);
+                                margin-bottom: 0rem;
+                            }
+                            @include breakpoint-up (xlarge) {
+                                top: 185rem;
                             }
                         }
-
+                        // world-container-dekstop (grouped)
+                        .world1-container-desktop, .world2-container-desktop {
+                            z-index: 1;
+                        }
+                        // world1 - container - desktop (individual)
+                        .world1-container-desktop {
+                            
+                        }
+                        .world2-container-desktop {
+                            
+                        }
                         // world-lists (grouped)
                         .world1-list, .world2-list {
                             font-size: $font-med;
                             list-style-type: none;
                             text-align: center;
                             padding: 0rem;
-                            margin-top: 2.5rem;
-                            margin-bottom: 0rem;
+                            margin-top: 5rem;
+                            margin-bottom: 5rem;
                             @include breakpoint-up (medium) {
                                 margin-top: 1rem;
-                                margin-bottom: 2.5rem;
                             }
                             @include breakpoint-up (large) {
                                 display: flex;
-                                justify-content: space-around;
-                                padding: 2.5vh 2.5vw;
-                                margin: 10vh 15vw;
+                                justify-content: center;
+                                margin: 5rem 10vw;
+                            }
+                            @include breakpoint-up (xlarge) {
+                                margin: 5rem 15vw;
                             }
                             li {
                                 font-size: $font-med;
@@ -281,45 +319,28 @@
                                     margin-bottom: .5rem;
                                 }
                                 @include breakpoint-up (large) {
-                                    max-width: 2.5rem;
-                                }
-                                @include breakpoint-up (xlarge) {
                                     font-size: $font-xmed;
+                                    margin: 1rem !important;
                                 }
                             }
                         }
-
                         // world-images
                         .w1-image, .w2-image {
-                            img {
-                                max-width: 100%;
-                                @include breakpoint-up (medium) {
-                                    margin-bottom: 2.5rem;
-                                }
-                                @include breakpoint-up (large) {
-                                    margin-bottom: 0rem;
-                                }
+                            margin-top: 2.5rem;
+                            @include breakpoint-up (medium) {
+                                margin-top: 0rem;
                             }
-                        }
-                        .w1-image {
-                            img {
+                            video {
+                                height: 100%;
+                                width: 100%;
+                                z-index: -1;
+                                @include breakpoint-up (medium) {
+                                    aspect-ratio: 4/3;
+                                }
                                 @include breakpoint-up (large) {
-                                    object-position: 5rem;
-                                }
-                                @include breakpoint-up (xlarge) {
-                                    object-position: 10rem;
-                                }
-                            }  
-                        }
-                        .w2-image {
-                            img {
-                                @include breakpoint-up (large) {
-                                    object-position: -5rem;
-                                }
-                                @include breakpoint-up (xlarge) {
-                                    object-position: -10rem;
-                                }
-                            }  
+                                    aspect-ratio: 16/9;
+                                }   
+                            }
                         }
                     }
                 }
