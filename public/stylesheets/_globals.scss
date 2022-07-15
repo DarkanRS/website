@@ -25,13 +25,10 @@ html {
             nav {
                 padding: 1rem;
                 @include breakpoint-up (medium) {
-                    padding: 1rem 2rem;
-                }
-                @include breakpoint-up (large) {
-                    padding: 1rem 2rem;
+                    padding: 1rem 2.5rem;
                 }
                 @include breakpoint-up (xlarge) {
-                    padding: 1rem 4rem;
+                    padding: 2rem 5rem;
                 }
             }
             // nav - formatting
@@ -109,7 +106,7 @@ html {
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: rgba(255, 255, 255, 0.116);
+                background-color: rgba(255, 255, 255, 0.08);
                 border: 1px solid rgba(255,255,255,0.1);
                 min-width: 11rem;
                 border-radius: 2.5px;
@@ -135,7 +132,7 @@ html {
                 display: block;
             } 
             .dropdown-content a:hover {
-                background-color: rgb(20, 33, 41);
+                background-color: rgb(22, 29, 32);
                 border-radius: 2.5px;
                 transition: background-color 200ms ease-in-out
             }

@@ -3,6 +3,12 @@
 }
 .main-container-hero {
     padding-top: 20vh;
+    @include breakpoint-up (medium) {
+        padding-top: 15vh;
+    }
+    @include breakpoint-up (xlarge) {
+        padding-top: 17.5vh;
+    }
     .hero-img {
         position: absolute;
         top: 0px;
@@ -24,7 +30,7 @@
             text-align: center;
             h1 {
                 margin-top: 0rem;
-                margin-bottom: .75rem;
+                margin-bottom: 0rem;
                 font-size: $font-lg;
                 color: white;
                 @include breakpoint-up (medium) {
@@ -39,14 +45,24 @@
                 font-weight: 600;
                 color: rgb(222, 222, 222);
                 margin-top: 0rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-
+                padding-left: 20vw;
+                padding-right: 20vw;
                 @include breakpoint-up (medium) {
                     line-height: 1.25;
                     font-size: $font-xmed;
                     font-weight: 600;
-                    padding: 0rem;
+                    padding-left: 30vw;
+                    padding-right: 30vw;
+                    margin-bottom: 2rem;
+                }
+                @include breakpoint-up (large) {
+                    padding-left: 35vw;
+                    padding-right: 35vw;
+                }
+                @include breakpoint-up (xlarge) {
+                    font-size: $font-xmed;
+                    padding-left: 40vw;
+                    padding-right: 40vw;
                 }
             }
             #no-igp {
@@ -64,7 +80,7 @@
                 background-color: rgba(255, 255, 255, 0.06);
                 border: 1px solid rgba(255,255,255,0.1);
                 border-radius: 5px;
-                padding: 1rem 2rem;
+                padding: 1rem 2.5rem;
                 backdrop-filter: blur(10px);
                 @include breakpoint-up (large) {
                     font-size: $font-med;
@@ -93,17 +109,17 @@
             }
             .game-content-header {
                 text-align: center;
-                padding: 4rem 2.5rem;
+                padding: 5rem 2.5rem;
                 padding-bottom: 2.5rem;
                 @include breakpoint-up (medium) {
-                    padding-right: 22.5vw;
-                    padding-left: 22.5vw;
+                    padding: 7.5rem 22.5vw;
+                    padding-bottom: 7.5rem;
                 }
                 @include breakpoint-up (large) {
                     padding: 10rem 20vw 8rem 20vw;
                 }
                 @include breakpoint-up (xlarge) {
-                    padding: 10rem 27.5vw 10rem 27.5vw;
+                    padding: 10rem 25vw 9rem 25vw;
                 }
                 h2 {
                     font-size: $font-xmed;
@@ -120,42 +136,58 @@
 
                         }
                         .content-container2 {
-                            background-color: rgba(255, 255, 255, 0.06);
-                            padding: 1rem 5vw;
-                            padding-bottom: 7.5vh;
+                            background-color: rgba(79, 79, 79, 0.06);
+                            padding: 5rem 5vw;
+                            padding-bottom: 7.5rem;
                             @include breakpoint-up (medium) {
-                                padding-top: 2.5rem;
-                                padding-bottom: 4rem;
-                                margin-top: 1.5rem;
+                                padding: 10rem 12.5vw;
                             }
                             @include breakpoint-up (large) {
-                                padding-top: 7.5rem;
+                                padding: 10rem 2.5rem;
+                            }
+                            @include breakpoint-up (xlarge) {
+                                padding-top: 15rem;
                                 padding-right: 2.5rem;
-                                padding-bottom: 10rem;
+                                padding-bottom: 15rem;
                                 padding-left: 2.5rem;
                             }
                             h2 {
                                 margin-bottom: 0rem;
                             }
+                            p {
+                                text-align: center;
+                                font-size: $font-med;
+                                padding: 0rem 5vw;  
+                                margin-bottom: 0rem;                               
+                                @include breakpoint-up (medium) {
+                                    padding: 0vh 10vw;
+                                }
+                                @include breakpoint-up (large) {
+                                    padding: 0vh 25vw;
+                                }
+                                @include breakpoint-up (xlarge) {
+                                    padding: 0vh 30vw;
+                                }
+                            }
                         }
                         .content-container3 {
                             text-align: center;
                             .cta-container {
-                                padding: 2.5rem;
+                                padding: 7.5rem 0rem;
                                 font-size: $font-xmed;
                                 @include breakpoint-up (medium) {
-                                    padding: 5rem;
-                                }
-                                @include breakpoint-up (large) {
                                     padding: 7.5rem;
                                 }
-                                @include breakpoint-up (xlarge) {
+                                @include breakpoint-up (large) {
                                     padding: 10rem;
+                                }
+                                @include breakpoint-up (xlarge) {
+                                    padding: 15rem;
                                 }
                                 .material-symbols-outlined {
                                     font-size: 75px;
                                     font-weight: 200 !important;
-                                    color: rgb(240, 202, 138);;
+                                    color: rgb(240, 202, 138);
                                     transition: transform 1s;
                                     @include breakpoint-up (large) {
                                         font-size: 100px;
@@ -180,27 +212,13 @@
                                 @include breakpoint-up (large) {
                                     font-size: $font-lg;
                                 }
-                            }
-                            p {
-                                text-align: center;
-                                font-size: $font-med;
-                                padding: 0rem 5vw;  
-                                margin-bottom: 0rem;                               
-                                @include breakpoint-up (medium) {
-                                    padding: 0vh 10vw;
-                                }
-                                @include breakpoint-up (large) {
-                                    padding: 0vh 22.5vw;
-                                }
                                 @include breakpoint-up (xlarge) {
-                                    padding: 0vh 27.5vw;
+                                    margin: 0rem 30vw;
                                 }
                             }
                         }
                         // world-container
                         .world-container {
-                            position: relative;
-                            z-index: 5;
                             h3 {
                                 text-align: center;
                                 font-size: $font-xmed;
@@ -222,32 +240,23 @@
                                 }
                             }
                             @include breakpoint-up (large) {
-                                h3, p {
-                                    text-align: left;
-                                }
+                                margin-bottom: 5rem;
+                                margin-left: 0rem;
                                 h3 {
+                                    font-size: $font-lg;
                                     margin-top: 0rem;
                                 }
                                 p {
-                                    max-width: 20rem;
-                                }
-                            }
-                        }
-                        // world-headers (grouped)
-                        .world1-header, .world2-header {
-                            @include breakpoint-up (large) {
-                                position: relative;
-                                top: 30rem;
-                                margin-right: 20vw;
-                                margin-left: 5rem;
-                                h3 {
-                                    font-size: $font-lg;
-                                    margin-bottom: 0rem;
+                                    margin-right: 25vw;
+                                    margin-left: 25vw;
                                 }
                             }
                             @include breakpoint-up (xlarge) {
-                                top: 50vh;
-                                margin-left: 10rem;
+                                p {
+                                    font-size: $font-med;
+                                    margin-right: 32.5vw;
+                                    margin-left: 32.5vw;
+                                }
                             }
                         }
                         // world - text - container
@@ -283,17 +292,6 @@
                                 top: 185rem;
                             }
                         }
-                        // world-container-dekstop (grouped)
-                        .world1-container-desktop, .world2-container-desktop {
-                            z-index: 1;
-                        }
-                        // world1 - container - desktop (individual)
-                        .world1-container-desktop {
-                            
-                        }
-                        .world2-container-desktop {
-                            
-                        }
                         // world-lists (grouped)
                         .world1-list, .world2-list {
                             font-size: $font-med;
@@ -308,10 +306,10 @@
                             @include breakpoint-up (large) {
                                 display: flex;
                                 justify-content: center;
-                                margin: 5rem 10vw;
+                                margin: 7.5rem 10vw;
                             }
                             @include breakpoint-up (xlarge) {
-                                margin: 5rem 15vw;
+                                margin: 10rem 20vw;
                             }
                             li {
                                 font-size: $font-med;

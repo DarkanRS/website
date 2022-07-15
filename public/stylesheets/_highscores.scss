@@ -5,12 +5,18 @@
             font-size: $font-xmed;
             margin: 0rem;
             margin-bottom: 1rem;
-            @include breakpoint-up (medium) {
+            @include breakpoint-up (large) {
                 font-size: $font-lg;
             }
         }
         h2 {
             margin-top: 0rem;
+            @include breakpoint-up (large) {
+                font-size: $font-med;
+            }
+            @include breakpoint-up (xlarge) {
+                font-size: $font-xmed;
+            }
         }
         h3 {
             margin-top: 0rem;

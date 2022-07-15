@@ -1,16 +1,18 @@
 .download-main-container {
+    height: 100vh;
     text-align: center;
     h1 {
-        padding: 10vh 27.5vw;
+        font-size: $font-xmed;
+        padding: 15vh 20vw 2.5rem 20vw;
         @include breakpoint-up (medium) {
-            padding: 2.5vh 30vw;
-            font-size: $font-lg;
+            font-size: $font-xmed;
+            padding: 15vh 37.5vw 2.5rem 37.5vw;
         }
         @include breakpoint-up (large) {
-            padding: 2.5vh 35vw;
+            font-size: $font-lg;
         }
         @include breakpoint-up (xlarge) {
-            padding: 2.5vh 40vw;
+            padding: 15vh 40vw 2.5rem 40vw;
         }
     }
     .hero-img {
@@ -25,48 +27,40 @@
             object-fit: cover;
         }
     }
-    // height - container
-    .height-container {
-        height: 100vh;
-        // download - (sub) - container
-        .download-sub-container {
+    .button-container {
+        a {
+            color: rgb(255, 163, 92);
+        }
+        @include breakpoint-up (medium) {
             display: flex;
             justify-content: center;
-            .button-container {
-                a {
-                    color: rgb(255, 163, 92);
-                }
-                @include breakpoint-up (medium) {
-                    display: flex;
-                    justify-content: space-around;
-                }
-                .download-client1, .download-client2, .download-client3 {
-                    font-size: $font-sm;
-                    padding: .5rem 2rem;
-                    width: 12rem;
-                    background-color: rgba(255, 255, 255, 0.06);
-                    border: 1px solid rgba(255,255,255,0.1);
-                    border-radius: 5px;
-                    backdrop-filter: blur(10px);
-                }
-                .download-client1 {
-                    margin-bottom: 1rem;
-                    @include breakpoint-up (medium) {
-                        margin-right: 1rem;
-                        margin-bottom: 0rem;
-                    }
-                }
-                .download-client2 {
-                    margin-bottom: 1rem;
-                    @include breakpoint-up (medium) {
-                        margin-right: 1rem;
-                        margin-bottom: 0rem;
-                    }
-                }
-                .download-client3 {
-        
+        }
+        .download-client1, .download-client2, .download-client3 {
+            font-size: $font-sm;
+            padding: .5rem 2rem;
+            width: 75vw;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 5px;
+            backdrop-filter: blur(10px);
+            @include breakpoint-up (medium) {
+                width: 10rem;
+                &:not(last-child) {
+                    margin-right: 1rem;
                 }
             }
+            @include breakpoint-up (large) {
+                width: 15rem;
+            }
+        }
+        .download-client1, .download-client2 {
+            margin-bottom: 1rem;
+            @include breakpoint-up (large) {
+                margin-bottom: 0rem;
+            }
+        }
+        .download-client3 {
+
         }
     }
 }

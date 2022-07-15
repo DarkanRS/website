@@ -32,19 +32,13 @@ html body nav {
 
 @media (min-width: 40em) {
   html body nav {
-    padding: 1rem 2rem;
-  }
-}
-
-@media (min-width: 64em) {
-  html body nav {
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
   }
 }
 
 @media (min-width: 87.5em) {
   html body nav {
-    padding: 1rem 4rem;
+    padding: 2rem 5rem;
   }
 }
 
@@ -147,7 +141,7 @@ html body .dropdown p {
 html body .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.116);
+  background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   min-width: 11rem;
   border-radius: 2.5px;
@@ -177,7 +171,7 @@ html body .dropdown-content p {
 }
 
 html body .dropdown-content a:hover {
-  background-color: #142129;
+  background-color: #161d20;
   border-radius: 2.5px;
   -webkit-transition: background-color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out;
@@ -343,6 +337,18 @@ html body .flex-ai-c {
   padding-top: 20vh;
 }
 
+@media (min-width: 40em) {
+  .main-container-hero {
+    padding-top: 15vh;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .main-container-hero {
+    padding-top: 17.5vh;
+  }
+}
+
 .main-container-hero .hero-img {
   position: absolute;
   top: 0px;
@@ -370,7 +376,7 @@ html body .flex-ai-c {
 
 .main-container-hero .sub-container-hero .hero h1 {
   margin-top: 0rem;
-  margin-bottom: .75rem;
+  margin-bottom: 0rem;
   font-size: 3.25rem;
   color: white;
 }
@@ -392,8 +398,8 @@ html body .flex-ai-c {
   font-weight: 600;
   color: #dedede;
   margin-top: 0rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 @media (min-width: 40em) {
@@ -401,7 +407,24 @@ html body .flex-ai-c {
     line-height: 1.25;
     font-size: 2rem;
     font-weight: 600;
-    padding: 0rem;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .main-container-hero .sub-container-hero .hero p {
+    padding-left: 35vw;
+    padding-right: 35vw;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .main-container-hero .sub-container-hero .hero p {
+    font-size: 2rem;
+    padding-left: 40vw;
+    padding-right: 40vw;
   }
 }
 
@@ -421,7 +444,7 @@ html body .flex-ai-c {
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -458,14 +481,14 @@ html body .flex-ai-c {
 
 .section-a-container .section-a-wrapper .section-a .game-content-header {
   text-align: center;
-  padding: 4rem 2.5rem;
+  padding: 5rem 2.5rem;
   padding-bottom: 2.5rem;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-header {
-    padding-right: 22.5vw;
-    padding-left: 22.5vw;
+    padding: 7.5rem 22.5vw;
+    padding-bottom: 7.5rem;
   }
 }
 
@@ -477,7 +500,7 @@ html body .flex-ai-c {
 
 @media (min-width: 87.5em) {
   .section-a-container .section-a-wrapper .section-a .game-content-header {
-    padding: 10rem 27.5vw 10rem 27.5vw;
+    padding: 10rem 25vw 9rem 25vw;
   }
 }
 
@@ -492,24 +515,28 @@ html body .flex-ai-c {
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
-  background-color: rgba(255, 255, 255, 0.06);
-  padding: 1rem 5vw;
-  padding-bottom: 7.5vh;
+  background-color: rgba(79, 79, 79, 0.06);
+  padding: 5rem 5vw;
+  padding-bottom: 7.5rem;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
-    margin-top: 1.5rem;
+    padding: 10rem 12.5vw;
   }
 }
 
 @media (min-width: 64em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
-    padding-top: 7.5rem;
+    padding: 10rem 2.5rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 {
+    padding-top: 15rem;
     padding-right: 2.5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
     padding-left: 2.5rem;
   }
 }
@@ -518,30 +545,55 @@ html body .flex-ai-c {
   margin-bottom: 0rem;
 }
 
+.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0rem 5vw;
+  margin-bottom: 0rem;
+}
+
+@media (min-width: 40em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p {
+    padding: 0vh 10vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p {
+    padding: 0vh 25vw;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p {
+    padding: 0vh 30vw;
+  }
+}
+
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 {
   text-align: center;
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
-  padding: 2.5rem;
+  padding: 7.5rem 0rem;
   font-size: 2rem;
 }
 
 @media (min-width: 40em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
-    padding: 5rem;
+    padding: 7.5rem;
   }
 }
 
 @media (min-width: 64em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
-    padding: 7.5rem;
+    padding: 10rem;
   }
 }
 
 @media (min-width: 87.5em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 .cta-container {
-    padding: 10rem;
+    padding: 15rem;
   }
 }
 
@@ -587,34 +639,10 @@ html body .flex-ai-c {
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-  text-align: center;
-  font-size: 1.25rem;
-  padding: 0rem 5vw;
-  margin-bottom: 0rem;
-}
-
-@media (min-width: 40em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding: 0vh 10vw;
-  }
-}
-
-@media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding: 0vh 22.5vw;
-  }
-}
-
 @media (min-width: 87.5em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 p, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 p {
-    padding: 0vh 27.5vw;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container2 h2, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .content-container3 h2 {
+    margin: 0rem 30vw;
   }
-}
-
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container {
-  position: relative;
-  z-index: 5;
 }
 
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3 {
@@ -649,34 +677,25 @@ html body .flex-ai-c {
 }
 
 @media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
-    text-align: left;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container {
+    margin-bottom: 5rem;
+    margin-left: 0rem;
   }
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container h3 {
+    font-size: 3.25rem;
     margin-top: 0rem;
   }
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
-    max-width: 20rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-header, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-header {
-    position: relative;
-    top: 30rem;
-    margin-right: 20vw;
-    margin-left: 5rem;
-  }
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-header h3, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-header h3 {
-    font-size: 3.25rem;
-    margin-bottom: 0rem;
+    margin-right: 25vw;
+    margin-left: 25vw;
   }
 }
 
 @media (min-width: 87.5em) {
-  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-header, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-header {
-    top: 50vh;
-    margin-left: 10rem;
+  .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world-container p {
+    font-size: 1.25rem;
+    margin-right: 32.5vw;
+    margin-left: 32.5vw;
   }
 }
 
@@ -726,10 +745,6 @@ html body .flex-ai-c {
   }
 }
 
-.section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-container-desktop, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-container-desktop {
-  z-index: 1;
-}
-
 .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list {
   font-size: 1.25rem;
   list-style-type: none;
@@ -753,13 +768,13 @@ html body .flex-ai-c {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 5rem 10vw;
+    margin: 7.5rem 10vw;
   }
 }
 
 @media (min-width: 87.5em) {
   .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world1-list, .section-a-container .section-a-wrapper .section-a .game-content-container .game-content-wrapper .game-content .world2-list {
-    margin: 5rem 15vw;
+    margin: 10rem 20vw;
   }
 }
 
@@ -1016,29 +1031,31 @@ footer .site-map p, footer .legal p {
 }
 
 .download-main-container {
+  height: 100vh;
   text-align: center;
 }
 
 .download-main-container h1 {
-  padding: 10vh 27.5vw;
+  font-size: 2rem;
+  padding: 15vh 20vw 2.5rem 20vw;
 }
 
 @media (min-width: 40em) {
   .download-main-container h1 {
-    padding: 2.5vh 30vw;
-    font-size: 3.25rem;
+    font-size: 2rem;
+    padding: 15vh 37.5vw 2.5rem 37.5vw;
   }
 }
 
 @media (min-width: 64em) {
   .download-main-container h1 {
-    padding: 2.5vh 35vw;
+    font-size: 3.25rem;
   }
 }
 
 @media (min-width: 87.5em) {
   .download-main-container h1 {
-    padding: 2.5vh 40vw;
+    padding: 15vh 40vw 2.5rem 40vw;
   }
 }
 
@@ -1060,37 +1077,25 @@ footer .site-map p, footer .legal p {
   }
 }
 
-.download-main-container .height-container {
-  height: 100vh;
-}
-
-.download-main-container .height-container .download-sub-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.download-main-container .height-container .download-sub-container .button-container a {
+.download-main-container .button-container a {
   color: #ffa35c;
 }
 
 @media (min-width: 40em) {
-  .download-main-container .height-container .download-sub-container .button-container {
+  .download-main-container .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
-.download-main-container .height-container .download-sub-container .button-container .download-client1, .download-main-container .height-container .download-sub-container .button-container .download-client2, .download-main-container .height-container .download-sub-container .button-container .download-client3 {
+.download-main-container .button-container .download-client1, .download-main-container .button-container .download-client2, .download-main-container .button-container .download-client3 {
   font-size: 0.875rem;
   padding: .5rem 2rem;
-  width: 12rem;
+  width: 75vw;
   background-color: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
@@ -1098,24 +1103,27 @@ footer .site-map p, footer .legal p {
           backdrop-filter: blur(10px);
 }
 
-.download-main-container .height-container .download-sub-container .button-container .download-client1 {
-  margin-bottom: 1rem;
-}
-
 @media (min-width: 40em) {
-  .download-main-container .height-container .download-sub-container .button-container .download-client1 {
+  .download-main-container .button-container .download-client1, .download-main-container .button-container .download-client2, .download-main-container .button-container .download-client3 {
+    width: 10rem;
+  }
+  .download-main-container .button-container .download-client1:not(last-child), .download-main-container .button-container .download-client2:not(last-child), .download-main-container .button-container .download-client3:not(last-child) {
     margin-right: 1rem;
-    margin-bottom: 0rem;
   }
 }
 
-.download-main-container .height-container .download-sub-container .button-container .download-client2 {
+@media (min-width: 64em) {
+  .download-main-container .button-container .download-client1, .download-main-container .button-container .download-client2, .download-main-container .button-container .download-client3 {
+    width: 15rem;
+  }
+}
+
+.download-main-container .button-container .download-client1, .download-main-container .button-container .download-client2 {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 40em) {
-  .download-main-container .height-container .download-sub-container .button-container .download-client2 {
-    margin-right: 1rem;
+@media (min-width: 64em) {
+  .download-main-container .button-container .download-client1, .download-main-container .button-container .download-client2 {
     margin-bottom: 0rem;
   }
 }
@@ -1632,7 +1640,7 @@ footer .site-map p, footer .legal p {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .main-container-highscores .sub-container-highscores h1 {
     font-size: 3.25rem;
   }
@@ -1640,6 +1648,18 @@ footer .site-map p, footer .legal p {
 
 .main-container-highscores .sub-container-highscores h2 {
   margin-top: 0rem;
+}
+
+@media (min-width: 64em) {
+  .main-container-highscores .sub-container-highscores h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .main-container-highscores .sub-container-highscores h2 {
+    font-size: 2rem;
+  }
 }
 
 .main-container-highscores .sub-container-highscores h3 {
