@@ -6,13 +6,10 @@
         padding: 15vh 20vw 2.5rem 20vw;
         @include breakpoint-up (medium) {
             font-size: $font-xmed;
-            padding: 15vh 37.5vw 2.5rem 37.5vw;
+            padding: 15vh 30vw 2.5rem 30vw;
         }
         @include breakpoint-up (large) {
             font-size: $font-lg;
-        }
-        @include breakpoint-up (xlarge) {
-            padding: 15vh 40vw 2.5rem 40vw;
         }
     }
     .hero-img {

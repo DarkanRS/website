@@ -14,8 +14,7 @@ html {
         font-weight: 600;
         padding: 0rem;
         margin: 0rem;
-        background: rgb(13,24,28);
-        background: linear-gradient(0deg, rgba(13,13,13,1) 0%, rgb(21, 31, 36) 51%, rgba(13,13,13,1) 100%);
+        background: rgb(5, 10, 15);
         color: rgb(222, 222, 222);
         cursor: default;
 
@@ -28,7 +27,10 @@ html {
                     padding: 1rem 2.5rem;
                 }
                 @include breakpoint-up (xlarge) {
-                    padding: 2rem 5rem;
+                    padding: 1.25rem 5rem;
+                }
+                @include breakpoint-up (xxlarge) {
+                    padding: 1.25rem 10rem;
                 }
             }
             // nav - formatting
@@ -39,15 +41,16 @@ html {
                 a {
                     position: relative;
                     font-size: $font-sm;
-                    margin-right: 2rem;
-
+                    margin-right: 2.5rem;
                     &:hover {
                         color: rgb(255, 255, 255);
                         transition: color 200ms ease-in-out;
                     }
-        
                     &:last-child {
                         margin-right: 0rem;
+                    }
+                    @include breakpoint-up (xxlarge) {
+                        font-size: $font-xmed;
                     }
                 }
                 p, #player-count {
@@ -55,6 +58,9 @@ html {
                 }
                 #player-count {
                     margin-right: .5rem;
+                    @include breakpoint-up (xxlarge) {
+                        font-size: $font-med;
+                    }
                 }
                 ul {
                     margin: 0rem;
@@ -63,7 +69,6 @@ html {
                 li {
                     list-style-type: none;
                 }
-
                 @include breakpoint-down (x-small) {
                     display: none;
                 }
@@ -73,6 +78,9 @@ html {
                 justify-content: center;
                 p, a {
                     font-size: $font-sm;
+                    @include breakpoint-up (xxlarge) {
+                        font-size: $font-med;
+                    }
                 }
                 @include breakpoint-up (medium) {
                     justify-content: space-between;
@@ -81,7 +89,7 @@ html {
             .nav-links {
                 margin-left: 2rem;
                 @include breakpoint-up (medium) {
-                    margin-left: 4rem;
+                    margin-left: 5rem;
                 }
             }
             // dropdown - menu
@@ -101,17 +109,24 @@ html {
                 display: inline-block;
                 p {
                     padding: 1rem 2rem 1rem 0rem;
+                    @include breakpoint-up (xxlarge) {
+                        padding: 2.5rem 2.5rem 2.5rem 0rem;
+                    }
                 }
             }
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: rgba(255, 255, 255, 0.08);
+                background-color: rgba(255, 255, 255, 0.1);
                 border: 1px solid rgba(255,255,255,0.1);
-                min-width: 11rem;
+                min-width: 7.5rem;
                 border-radius: 2.5px;
                 top: 3.25rem;
                 left: -1rem;
+                @include breakpoint-up (xxlarge) {
+                    top: 5.5rem;
+                    width: 11.25rem;
+                }
             }
             .dropdown-links {
                 position: relative;
@@ -122,6 +137,9 @@ html {
                 text-align: left;
                 padding: .75rem;
                 display: block;
+                @include breakpoint-up (xxlarge) {
+                    font-size: $font-med;
+                }
             }
             .dropdown-content p {
                 font-size: $font-sm;
@@ -132,7 +150,7 @@ html {
                 display: block;
             } 
             .dropdown-content a:hover {
-                background-color: rgb(22, 29, 32);
+                background-color: rgb(5, 10, 15);
                 border-radius: 2.5px;
                 transition: background-color 200ms ease-in-out
             }
@@ -145,15 +163,16 @@ html {
             }
 
         // footer
-
             footer {
                 font-size: $font-sm;
-                background-color: rgb(13, 13, 13);
+                background-color: rgb(0, 0, 0);
                 padding: 5vh 10vw;
                 color: rgb(222, 222, 222);
                 @include breakpoint-up (large) {
-                    font-size: $font-sm;
                     padding: 2.5vh 5vw;
+                }
+                @include breakpoint-up (xxlarge) {
+                    font-size: $font-med;
                 }
                 a {
                     &:hover {
@@ -191,7 +210,6 @@ html {
             }
 
         // global design
-
             // link - design
             a, a:visited, a:hover {
                 text-decoration: none;
