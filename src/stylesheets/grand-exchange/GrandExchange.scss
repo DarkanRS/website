@@ -1,0 +1,214 @@
+// Font-awesome
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+// Functionality
+@import "src/stylesheets/variables";
+@import "src/stylesheets/mixins";
+.ge-container {
+  .ge-button{
+    color: rgb(222, 222, 222);
+    background-color: rgb(20, 30, 40);
+    width: 300px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  .button-selected {
+    background-color: rgb(5, 10, 20)
+  }
+
+  .ge-table {
+    margin-bottom: 1.5rem;
+  }
+  .none {
+    display: None;
+  }
+
+  .green {
+    color: forestgreen;
+  }
+
+  .red {
+    color: darkred;
+  }
+
+  .upside-down {
+    transform: scale(-1);
+  }
+  .yellow {
+
+    background-color: inherit;
+  }
+
+  h1 {
+    font-size: $font-xmed;
+    margin: 0rem;
+    margin-bottom: 1rem;
+    @include breakpoint-up (large) {
+      font-size: $font-lg;
+    }
+  }
+  h2 {
+    margin-top: 0rem;
+    @include breakpoint-up (large) {
+      font-size: $font-med;
+    }
+    @include breakpoint-up (xlarge) {
+      font-size: $font-xmed;
+    }
+  }
+  h3 {
+    margin-top: 0rem;
+  }
+  .header-highscores {
+    text-align: center;
+    padding: 5rem 2.5rem;
+    @include breakpoint-up (large) {
+      padding: 2.5rem 2.5rem;
+    }
+  }
+  .sub-header-ge {
+    margin-right: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    display: flex;
+  }
+  a:hover {
+    color: white;
+  }
+  .skill-icon {
+    height: 7rem;
+  }
+  .sub-header-hs {
+    margin-right: 5vw;
+    margin-left: 5vw;
+    margin-bottom: 2.5rem;
+    @include breakpoint-up (large) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    text-align: left;
+  }
+  .select-hs {
+    @include breakpoint-up (medium) {
+      display: flex;
+    }
+  }
+  .select-hs-container {
+    display: flex;
+    justify-content: center;
+  }
+  // highscores table
+  .ge-table {
+    table {
+      width: 85vw;
+      box-shadow: 5px 0px 30px rgb(0, 0, 0);
+      text-align: right;
+      border-spacing: 1px;
+      @include breakpoint-up (medium) {
+        width: 85vw;
+      }
+      th, th a {
+        height: 3rem;
+        padding: .75rem;
+        background-color: rgb(10, 20, 30);
+        color: rgb(240, 202, 138);
+        a {
+          cursor: pointer;
+        }
+      }
+      th a:hover {
+        .none {
+          display: inherit;
+          color: inherit;
+        }
+      }
+      th a:active {
+        .none {
+          color: forestgreen;
+        }
+      }
+      td {
+        height: 3rem;
+        text-align: right;
+        padding: .5rem;
+        background-color: rgb(20, 30, 40);
+        p {
+          margin: 0rem;
+        }
+      }
+      #item-name {
+        text-align: left;
+        width: 5rem;
+      }
+      #item-type,
+      #amount-left,
+      #price-each {
+        width: 10rem;
+        text-align: left;
+      }
+      #item-type {
+        text-align: left;
+        padding-left: 1rem;
+        @include breakpoint-up (medium) {
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+  // footer pagination nav
+  .pagination-container {
+    padding: 1rem 0rem;
+    a {
+      background-color: none;
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      padding: .5rem .75rem;
+      &:hover {
+        background-color: rgba(50, 60, 70, 0.75);
+        border-radius: 2px;
+        transition: background-color 200ms ease-in-out;
+      }
+    }
+    ul {
+      padding-left: 0rem;
+      list-style: none;
+    }
+    .prev-next {
+      position: relative;
+      bottom: .05rem;
+      padding: .5rem .75rem;
+      cursor: pointer;
+      &:hover {
+        opacity: 70%;
+        transition: opacity 200ms ease-in-out;
+      }
+      cursor: pointer;
+    }
+    .active {
+      background-color: rgb(50, 60, 70);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .page-dots {
+      padding: .3525rem .55rem;
+    }
+  }
+}

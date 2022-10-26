@@ -9,6 +9,8 @@ import { skills } from '../utils/constants';
 import HighscoresHeader from '../components/highscores/HighscoresHeader.jsx';
 import HighscoresTable from '../components/highscores/HighscoresTable.jsx';
 import HighscoresContext from '../utils/contexts/HighscoresContext.js';
+import HighscoresNavigation from "../components/highscores/HighscoresNavigation.jsx";
+import HighscoresSkillTable from "../components/highscores/HighscoresSkillTable.jsx";
 
 export default function HighscoresPage() {
 
@@ -17,8 +19,9 @@ export default function HighscoresPage() {
     let [ category, setCategory ] = useState(categoryParam);
     let [ page, setPage ] = useState(pageParam);
     let [ skill, setSkill ] = useState(skillParam);
+    const [usernameHighlight, searchUser] = useState('');
     
-    let highscoresProvider = useMemo(() => ({ page, setPage, category, setCategory, skill, setSkill }), [ page, setPage, category, setCategory, skill, setSkill ]);
+    let highscoresProvider = useMemo(() => ({ page, setPage, category, setCategory, skill, setSkill, usernameHighlight, searchUser }), [ page, setPage, category, setCategory, skill, setSkill, usernameHighlight, searchUser ]);
 
     useEffect(() => {
 
@@ -36,7 +39,7 @@ export default function HighscoresPage() {
         
         setSkill(skill);
 
-        window.history.replaceState(null, '', `/highscores/${category}/${skill}/${page}`);
+        window.history.replaceState(null, '', `/highscores/skill/${category}/${skill}/${page}`);
 
     }, [ category, page ]);
 
@@ -45,7 +48,8 @@ export default function HighscoresPage() {
             <div className='main-container-highscores'>
                 <div className='sub-container-highscores'>
                     <HighscoresHeader />
-                    <HighscoresTable />
+                    {skill == "overall" ? <HighscoresTable /> : <HighscoresSkillTable />}
+                    <HighscoresNavigation />
                 </div>
             </div>
         </HighscoresContext.Provider>
