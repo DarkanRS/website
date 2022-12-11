@@ -5,18 +5,17 @@
 @import "src/stylesheets/variables";
 @import "src/stylesheets/mixins";
 
-.download-main-container {
+.launcher-issues-main-container {
   text-align: center;
-  height: 90vh;
   .download-sub-container {
     padding-top: 15vh;
   }
   h1 {
     font-size: $font-xmed;
-    padding: 5vh 20vw 2.5rem 20vw;
+    padding: 1vh 20vw 2.5rem 20vw;
     @include breakpoint-up (medium) {
       font-size: $font-xmed;
-      padding: 5vh 25vw 2.5rem 25vw;
+      padding: 1vh 25vw 2.5rem 25vw;
     }
     @include breakpoint-up (large) {
       font-size: $font-lg;
