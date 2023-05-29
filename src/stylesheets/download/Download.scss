@@ -134,14 +134,11 @@
         width: 19rem;
       }
     }
-    .download-client1, .download-client2 {
+    .download-client1, .download-client2, .download-client3 {
       margin-bottom: 1rem;
       @include breakpoint-up (large) {
         margin-bottom: 0rem;
       }
-    }
-    .download-client3 {
-
     }
   }
 }
